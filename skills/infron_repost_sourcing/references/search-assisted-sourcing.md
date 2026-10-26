@@ -4,6 +4,10 @@ Use the host's available web-search tools when the user asks to find repost cand
 
 ## Search and bound
 
+v0.1.2 scheduling: reserve at least two actual queries per lane, up to two adaptive queries. Prefer the strongest fresh-information engine and provider recency filters. Start with source-anchored queries using the actual month/year, e.g. `site:x.com/vllm_project/status "Oct" "2026"`, `site:x.com/lmsysorg/status "Oct" "2026"`, and model-maker accounts from the source pool. Web engines need not support X-native since/until syntax. Do not spend all six queries on a weak engine or overconstrained format. Search Model releases/evaluations separately from inference-engine news. If no 48h Model candidates, follow official release-page events to actual X originals; seven-day discovery fallback does not waive timeliness or justify invented evergreen reasons.
+
+Save observed triage before deep reading, then run sourcing_plan.py (format in SKILL.md). Alternate viable lanes and try a replacement when the first candidate exceeds its first-pass budget. Use the dedicated history snapshot instead of dumping prior run/decision payloads. This is agent-led discovery; CLI automatic_discovery remains false.
+
 1. Read the source pool, current brand context, local historical seeds and state. Use source links as leads, never an author whitelist.
 2. Start with a seven-day Other window and 48-hour Model window. Search date-sensitive queries through the host's search tools, prioritizing official accounts and precise events. Example queries: `site:x.com/vllm_project/status inference`, `site:x.com/lmsysorg/status serving`, and official model-account release searches. Include current date/month in queries and available recency filters, but verify publication time independently.
 3. Use at most six search queries, gather at most 30 distinct concrete status URLs, and deeply review at most 20. If one search engine returns stale results or trending summaries, use a second engine when available; record the difference. Stop at the bound and report remaining gaps. Do not claim complete coverage.

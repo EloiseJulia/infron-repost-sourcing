@@ -247,9 +247,9 @@ def safe_md(text):
 def brief(result):
     s = result['summary']
     lines = ['# Infron Repost Sourcing v0.1', '',
-             ('**SYNTHETIC FIXTURE — 非真实候选。**' if result['fixture'] else '**手工输入复核 — 未实现自动发现。**'), '',
+             ('**SYNTHETIC FIXTURE — 非真实候选。**' if result['fixture'] else '**AI候选审核 — CLI不含独立X采集器。**'), '',
              f"Run `{result['run_id']}` · {result['as_of']} · rules `{result['rules_version']}`", '',
-             f"状态：{s['status']}；输入 {s['input']}，同批重复 {s['input_duplicates']}，深读 {s['reviewed']}。",
+             f"状态：{s['status']}；输入 {s['input']}，同批重复 {s['input_duplicates']}，已处理审核记录 {s['reviewed']}。",
              f"主推荐 {s['recommended']}；Hold {s['hold']}；未完成 {s.get('deferred',0)}；Reject {s['reject']}；合格备选 {s['alternates']}。", '',
              '本结果仅覆盖所供材料；不代表全 X 搜索结论。recommend 不等于批准或已发布。', '',
              '## 主推荐', '']
