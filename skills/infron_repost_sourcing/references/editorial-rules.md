@@ -1,5 +1,7 @@
 # Editorial rules · 0.1.0 · 2026-10-26
 
+v0.1.3 mode note: the principles below guide relevance/brand judgment. The mandatory complete-X-media gates and terminal Hold/reject workflow are for explicit publication-readiness audit. Default curation follows SKILL.md: recommend a separately inspected primary article when the X post is inaccessible; do not imply that the inaccessible post itself was cleared. Timeliness is a reasoned editorial preference in curation, not the legacy 48h hard gate.
+
 ## Grounding and precedence
 
 User instructions → current explicit brief/mentor feedback → current project brand context → these provisional rules → observed history. Preserve provenance; do not turn inferred motives into mentor decisions.
