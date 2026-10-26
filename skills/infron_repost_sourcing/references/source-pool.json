@@ -1,0 +1,133 @@
+{
+  "version": "0.1.0-2026-10-26",
+  "automatic_discovery": false,
+  "checked_at": "2026-10-26",
+  "note": "12 grounded starter leads: official linked identities and observed historical sources are distinguished; not an acceptance whitelist.",
+  "sources": [
+    {
+      "handle": "InfronAI",
+      "role": "brand_history",
+      "lane": "both",
+      "identity_status": "verified_link",
+      "identity_evidence": "https://github.com/InfronAI",
+      "x_url": "https://x.com/InfronAI",
+      "use": "History and positioning, not a third-party daily repost candidate"
+    },
+    {
+      "handle": "arena",
+      "role": "evaluator",
+      "lane": "Model",
+      "identity_status": "observed_in_verified_quote",
+      "identity_evidence": "https://x.com/InfronAI/status/2114564382751694946",
+      "x_url": "https://x.com/arena",
+      "use": "Ranking leads; recheck author identity/method/media for each post"
+    },
+    {
+      "handle": "alibaba_qwen",
+      "role": "model_developer",
+      "lane": "Model",
+      "identity_status": "verified_link",
+      "identity_evidence": "https://huggingface.co/Qwen",
+      "x_url": "https://x.com/alibaba_qwen",
+      "use": "Model releases; distinguish model content from cloud-platform CTA"
+    },
+    {
+      "handle": "deepseek_ai",
+      "role": "model_developer",
+      "lane": "Model",
+      "identity_status": "verified_link",
+      "identity_evidence": "https://huggingface.co/deepseek-ai",
+      "x_url": "https://x.com/deepseek_ai",
+      "use": "Release/evaluation leads, no author-level approval"
+    },
+    {
+      "handle": "vllm_project",
+      "role": "inference_framework",
+      "lane": "Other",
+      "identity_status": "verified_link",
+      "identity_evidence": "https://github.com/vllm-project/vllm",
+      "x_url": "https://x.com/vllm_project",
+      "use": "Serving, caching, deployment measurements; check workload scope"
+    },
+    {
+      "handle": null,
+      "role": "inference_framework",
+      "lane": "Other",
+      "identity_status": "official_repository_only",
+      "identity_evidence": "https://github.com/sgl-project/sglang",
+      "x_url": null,
+      "use": "Off-platform leads until actual linked X handle/original is resolved; do not invent URLs"
+    },
+    {
+      "handle": "alibaba_cloud",
+      "role": "cloud_provider",
+      "lane": "Other",
+      "identity_status": "observed_in_verified_quote",
+      "identity_evidence": "https://x.com/InfronAI/status/2082670209777942882",
+      "x_url": "https://x.com/alibaba_cloud",
+      "use": "Conditional partner-context lead only; historical quote does not waive overlap screening"
+    },
+    {
+      "handle": "Kimi_Moonshot",
+      "role": "model_developer",
+      "lane": "Model",
+      "identity_status": "observed_historical_source",
+      "identity_evidence": "https://x.com/InfronAI/status/2114138057138130997",
+      "x_url": "https://x.com/Kimi_Moonshot",
+      "use": "Historical model-release lead; video needs review; independently verify identity before recommendation."
+    },
+    {
+      "handle": "ArtificialAnlys",
+      "role": "evaluator",
+      "lane": "Model",
+      "identity_status": "observed_historical_source",
+      "identity_evidence": "https://x.com/InfronAI/status/2113247619220934671",
+      "x_url": "https://x.com/ArtificialAnlys",
+      "use": "Historical benchmark lead; read original methodology/chart."
+    },
+    {
+      "handle": "jahooma",
+      "role": "developer_tool_author",
+      "lane": "Other",
+      "identity_status": "observed_historical_source",
+      "identity_evidence": "https://x.com/jahooma/status/2075775678633648503",
+      "x_url": "https://x.com/jahooma",
+      "use": "Observed historical repost; assess product overlap per post."
+    },
+    {
+      "handle": "inceptron",
+      "role": "provider_or_partner_unconfirmed",
+      "lane": "Model",
+      "identity_status": "observed_historical_source",
+      "identity_evidence": "https://x.com/inceptron/status/2071973015789666664",
+      "x_url": "https://x.com/inceptron",
+      "use": "Historical partnership claim only; current relationship must be verified."
+    },
+    {
+      "handle": "AndrewHan_Zheng",
+      "role": "integration_author",
+      "lane": "Other",
+      "identity_status": "observed_historical_source",
+      "identity_evidence": "https://x.com/AndrewHan_Zheng/status/2061370992593613227",
+      "x_url": "https://x.com/AndrewHan_Zheng",
+      "use": "Historical technical integration lead; identity and full instructions must be checked."
+    }
+  ],
+  "discovery_plan": {
+    "source_updates": "Start with three confirmed identities per lane, at most one bounded batch each once access/budget exist.",
+    "topic_exploration": [
+      {
+        "lane": "Model",
+        "query": "(from:alibaba_qwen OR from:deepseek_ai) -is:retweet",
+        "validated_on_api": false
+      },
+      {
+        "lane": "Other",
+        "query": "(\"prefix caching\" OR \"speculative decoding\") (benchmark OR latency) lang:en -is:retweet",
+        "validated_on_api": false
+      }
+    ],
+    "event_reverse_lookup": "From official release/repo/blog, locate actual author X status; otherwise off-platform lead.",
+    "bounds": "Proposed 48h Model/7d Other; cap input 30/deep reads 20; no API requests authorized now."
+  }
+}

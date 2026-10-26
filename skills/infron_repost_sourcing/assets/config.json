@@ -1,0 +1,12 @@
+{
+  "rules_version": "0.1.0-2026-10-26",
+  "source_pool_version": "0.1.0-2026-10-26",
+  "max_input": 30,
+  "max_reviewed": 20,
+  "max_recommendations": 2,
+  "freshness_hours": {"Model": 48, "Other": 168},
+  "review_ttl_hours": 24,
+  "automatic_discovery": false,
+  "api_request_budget": 0,
+  "paid_trial_budget_usd": 0
+}

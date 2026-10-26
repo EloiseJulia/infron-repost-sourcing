@@ -1,0 +1,155 @@
+[
+  {
+    "url": "https://x.com/InfronAI/status/2114564382751694946",
+    "action": "quote",
+    "event_key": "openai:arena-frontier:2026-10-21",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2114564382751694946",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "wrapper"
+  },
+  {
+    "url": "https://x.com/arena/status/2112600237491810662",
+    "action": "quote",
+    "event_key": "openai:arena-frontier:2026-10-21",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2114564382751694946",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "quoted_original"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2114138057138130997",
+    "action": "quote",
+    "event_key": "history:2114138057138130997",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2114138057138130997",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "wrapper"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2113247619220934671",
+    "action": "quote",
+    "event_key": "history:2113247619220934671",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2113247619220934671",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "wrapper"
+  },
+  {
+    "url": "https://x.com/ArtificialAnlys/status/2112218661432000694",
+    "action": "quote",
+    "event_key": "history:2113247619220934671",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2113247619220934671",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "quoted_original"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2082670209777942882",
+    "action": "quote",
+    "event_key": "infron:alibaba-collaboration:2026-07-30",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2082670209777942882",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "wrapper"
+  },
+  {
+    "url": "https://x.com/alibaba_cloud/status/2082647369888518577",
+    "action": "quote",
+    "event_key": "infron:alibaba-collaboration:2026-07-30",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2082670209777942882",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "quoted_original"
+  },
+  {
+    "url": "https://x.com/alibaba_cloud/status/2082647369888518577",
+    "action": "repost",
+    "event_key": "infron:alibaba-collaboration:2026-07-30",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/reposts",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "original"
+  },
+  {
+    "url": "https://x.com/jahooma/status/2075775678633648503",
+    "action": "repost",
+    "event_key": "history:2075775678633648503",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/reposts",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "original"
+  },
+  {
+    "url": "https://x.com/inceptron/status/2071973015789666664",
+    "action": "repost",
+    "event_key": "history:2071973015789666664",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/reposts",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "original"
+  },
+  {
+    "url": "https://x.com/AndrewHan_Zheng/status/2061370992593613227",
+    "action": "repost",
+    "event_key": "history:2061370992593613227",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/reposts",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "original"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2114551241296822294",
+    "action": "original",
+    "event_key": "history:2114551241296822294",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2114551241296822294",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "own_post"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2114492378027352571",
+    "action": "original",
+    "event_key": "history:2114492378027352571",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2114492378027352571",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "own_post"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2114178474382655883",
+    "action": "original",
+    "event_key": "history:2114178474382655883",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2114178474382655883",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "own_post"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2114167671524892871",
+    "action": "original",
+    "event_key": "history:2114167671524892871",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2114167671524892871",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "own_post"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2113628999393874373",
+    "action": "original",
+    "event_key": "infron:free-lineup:2026-10-19",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2113628999393874373",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "own_post"
+  },
+  {
+    "url": "https://x.com/InfronAI/status/2112185876054733177",
+    "action": "original",
+    "event_key": "infron:free-lineup:2026-10-19",
+    "relationship_verified": true,
+    "evidence_url": "https://x.com/InfronAI/status/2112185876054733177",
+    "verified_at": "2026-10-26T15:24:54.274988+08:00",
+    "subject": "own_post"
+  }
+]

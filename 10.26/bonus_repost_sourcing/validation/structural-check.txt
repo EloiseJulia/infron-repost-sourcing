@@ -1,0 +1,2 @@
+PASS: canonical metadata shape, lengths/naming, resources, JSON assets, UI prompt and manual-only disclosure.
+Official quick_validate.py remains separately dependent on PyYAML; this check does not claim to run it.

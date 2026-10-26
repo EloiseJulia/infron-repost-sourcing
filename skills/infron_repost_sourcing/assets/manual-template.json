@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "mode": "manual",
+  "coverage": {
+    "discovery": "not_implemented",
+    "status": "blocked",
+    "window": "SYNTHETIC TEMPLATE",
+    "success": [],
+    "failed": [
+      "Replace template with real supplied evidence and semantic review."
+    ]
+  },
+  "candidates": [
+    {
+      "url": "https://x.com/example/status/900000000000000001",
+      "author": "@example",
+      "synthetic": true,
+      "lane": "Model",
+      "post_type": "unknown",
+      "published_at": null,
+      "event_key": "synthetic:replace-with-specific-event",
+      "article_urls": [],
+      "edit_ids": [],
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "unavailable",
+          "note": "SYNTHETIC TEMPLATE: replace with actual reading record."
+        },
+        "quote": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "SYNTHETIC TEMPLATE: replace with actual reading record."
+        },
+        "media": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "SYNTHETIC TEMPLATE: replace with actual reading record."
+        },
+        "links": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "SYNTHETIC TEMPLATE: replace with actual reading record."
+        }
+      }
+    }
+  ]
+}

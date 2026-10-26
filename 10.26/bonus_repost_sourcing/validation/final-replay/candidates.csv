@@ -1,0 +1,7 @@
+﻿post_id,url,author,lane,verdict,selected,reason_codes,summary_zh
+900000000000000101,https://x.com/i/web/status/900000000000000101,'@fixtureauthor,Model,hold,False,facts_unverified;publication_time_unknown;editorial_hold,Cedar v2 官方发布权重与可复现评测脚本，并与 Pine v1 对比；但精确发布时间有冲突。
+900000000000000102,https://x.com/i/web/status/900000000000000102,'@fixtureauthor,Model,recommend,True,editorial_pass,独立评测者用100个相同编程任务比较 Cedar v2 与 Pine v1，并公开逐任务成功率与成本计算方法。
+900000000000000103,https://x.com/i/web/status/900000000000000103,'@fixtureauthor,Model,reject,False,overlap_promotion,官方 Cedar v2 发布配图引导用户注册 MergeAPI，后者提供与 Infron 重叠的多模型推理聚合服务。
+900000000000000104,https://x.com/i/web/status/900000000000000104,'@fixtureauthor,Other,hold,False,incomplete_evidence;facts_unverified;brand_unknown;editorial_hold,工程师声称 Agent 可靠性提升4倍，但唯一说明实验设置与结果的视频不可访问。
+900000000000000105,https://x.com/i/web/status/900000000000000105,'@fixtureauthor,Other,recommend,True,editorial_pass,可复现的 prefix-cache 实验：40个相同前缀请求，对比交错与隔离服务器组，分别报告缓存命中数及 TTFT 中位数，并说明冷启动限制。
+900000000000000106,https://x.com/i/web/status/900000000000000106,'@fixtureauthor,Model,hold,False,facts_unverified;publication_time_unknown;editorial_hold,另一个作者重复 Cedar v2 权重与评测发布，没有独立技术补充；发布时间字段亦有冲突。
