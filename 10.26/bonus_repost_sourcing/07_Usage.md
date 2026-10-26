@@ -2,6 +2,8 @@
 
 当前版本为 **项目内手工输入筛选模式**。自动发现未实现；没有发布、购买、部署或调度。
 
+接续补充：已加入AI通过宿主搜索工具主动找候选的流程，不必由用户先给链接。CLI自动采集仍未实现。6条新真实帖子试用得到1推荐、5Hold，详见 `08_Real_Search_Trial.md`；此前Arena单条样例保留为历史测试，不再作为当前唯一真实验证。
+
 2026-10-26接续验证：用户上传包在Linux环境已通过官方quick_validate和17项行为测试，合成重放为2推荐、3Hold、1Reject。见 `06_Validation.md` 和 `validation/*-current.json`。原Windows缺少PyYAML的日志仅表示当时状态；本轮未连接或写回Windows目录。
 
 ## 文件位置与写回状态

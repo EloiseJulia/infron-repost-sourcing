@@ -1,0 +1,7 @@
+{
+  "before_state_sha256": "98e901e0104262f552b194c47ab981ee1ad3f6c82d0cbf620d825d3d4b4cb8a8",
+  "exit_code": 0,
+  "stdout": "{\"status\": \"partial_coverage\", \"input\": 6, \"input_duplicates\": 0, \"reviewed\": 6, \"recommended\": 1, \"hold\": 5, \"reject\": 0, \"alternates\": 0}\n",
+  "stderr": "",
+  "at": "2026-10-26T08:25:20.427317+00:00"
+}

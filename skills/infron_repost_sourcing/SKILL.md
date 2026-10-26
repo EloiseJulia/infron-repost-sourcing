@@ -13,7 +13,7 @@ Read the project's current `workflows/infron-content/02_Brand_Context.md` when a
 Run `python skills/infron_repost_sourcing/scripts/repost.py preflight` from the project root.
 Use Python 3.10+; the runtime needs only the standard library.
 
-Treat **automatic discovery as not implemented**. Do not substitute browser crawling or a few search snippets. Use supplied links, exported records or manually read posts. Report incomplete coverage separately from finding no suitable posts. Ask only for the authorized X reading service/configuration and a spending cap when needed; never request tokens in chat or inspect unrelated secrets.
+Treat **standalone/API automatic discovery as not implemented**. When no links are supplied, proactively follow [agent-led candidate discovery](references/search-assisted-sourcing.md) using available host web-search tools, then individually verify posts. Do not ask the user to assemble candidates first. This agent-led workflow is distinct from a standalone collector: Python still consumes reviewed input only. Do not substitute browser crawling or search snippets for evidence. Report incomplete coverage separately from finding no suitable posts. Ask only for the authorized X reading service/configuration and a spending cap when needed; never request tokens in chat or inspect unrelated secrets.
 
 For future discovery planning, read [sources and bounded queries](references/source-pool.json) and [adapter contract](references/data-access.md). Do not run unverified API query templates or paid calls in v0.1. Use browser reading only for bounded individual verification, stopping at login/media/access gates.
 
