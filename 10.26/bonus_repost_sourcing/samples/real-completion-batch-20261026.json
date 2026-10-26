@@ -1,0 +1,670 @@
+{
+  "schema_version": "1.0",
+  "mode": "manual",
+  "coverage": {
+    "discovery": "not_implemented",
+    "status": "partial",
+    "window": "2026-10-26主动公开搜索发现6条新真实候选；非X API自动采集或完整全站覆盖",
+    "success": [
+      "三组来源搜索得到真实status链接，逐条浏览器读取6篇原帖",
+      "弹性EP文章正文及四图完成核验；vLLM工程文章正文读取",
+      "对照本地14条历史动作与持久状态去重",
+      "补读Trainium和DeepInfer引用全文及博客正文",
+      "补读Omni文章核心章节、评测表/限制并视觉核查六张架构图"
+    ],
+    "failed": [
+      "公开媒体点击显示登录提示，三条候选的关键媒体仍被阻挡；有明确对象/尝试记录",
+      "完整实时官号历史未取得；CLI自动发现未实现；可选Omni YouTube演示未播放，不以其证明指标"
+    ]
+  },
+  "candidates": [
+    {
+      "url": "https://x.com/lmsysorg/status/2113093747261243448",
+      "post_id": "2113093747261243448",
+      "author": "@lmsysorg",
+      "synthetic": false,
+      "lane": "Other",
+      "post_type": "original",
+      "published_at": "2026-10-22T02:23:03.387000+00:00",
+      "event_key": "sglang:elastic-ep:nixl:2026-10-21",
+      "article_urls": [
+        "https://www.lmsys.org/blog/2026-10-21-elastic-ep-scaling-nixl"
+      ],
+      "edit_ids": [],
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "浏览器原帖详情完整正文；发布时间由X ID时间戳计算，与页面日期对照，非搜索摘要时间。",
+          "locator": "https://x.com/lmsysorg/status/2113093747261243448"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "原帖详情未见引用卡"
+        },
+        "media": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "原帖仅文章预览卡，没有独立上传图/视频"
+        },
+        "links": {
+          "presence": "yes",
+          "status": "full",
+          "note": "原帖全文、文章全文及四图已检查；扩容准备期间维持服务，但提交转换阶段token有暂停，不能写成零中断。",
+          "locator": "https://www.lmsys.org/blog/2026-10-21-elastic-ep-scaling-nixl"
+        }
+      },
+      "review": {
+        "reviewer": "Codex real-post review",
+        "checked_at": "2026-10-26T08:36:32.691200+00:00",
+        "summary_zh": "SGLang弹性EP扩容",
+        "why_now": "近7日工程内容，围绕MoE扩容的实际运维问题",
+        "identity": "verified",
+        "identity_reason": "官方sgl-project/sglang仓库README的X链接指向lmsysorg；LMSYS站点确认项目关联",
+        "facts": "verified",
+        "fact_reason": "原帖全文、文章全文及四图已检查；扩容准备期间维持服务，但提交转换阶段token有暂停，不能写成零中断。",
+        "brand": "acceptable",
+        "brand_reason": "开源推理工程设计，无推理聚合平台注册CTA；NVIDIA与Mooncake为技术依赖/贡献方",
+        "decision": "hold",
+        "action": "none",
+        "priority": 1,
+        "reason": "上轮已选入主推荐，本轮跳过重复。",
+        "novelty_reason": "未命中本地14条历史动作及状态；未证明完整实时官号历史均无重复",
+        "quality": {
+          "audience_value": {
+            "level": "high",
+            "reason": "解决扩容粒度与重启代价问题，有工程约束和实现说明"
+          },
+          "substance": {
+            "level": "high",
+            "reason": "解决扩容粒度与重启代价问题，有工程约束和实现说明"
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "解决扩容粒度与重启代价问题，有工程约束和实现说明"
+          },
+          "brand_fit": {
+            "level": "medium",
+            "reason": "解决扩容粒度与重启代价问题，有工程约束和实现说明"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "解决扩容粒度与重启代价问题，有工程约束和实现说明"
+          }
+        },
+        "entities": [
+          {
+            "name": "SGLang弹性EP扩容",
+            "role": "open_source_engineering",
+            "behavior": "技术公告/文章分享",
+            "evidence": "https://x.com/lmsysorg/status/2113093747261243448"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "文章说明MoE部署在线扩容的设计，同时明确转换阶段存在token暂停",
+            "status": "verified",
+            "evidence": "https://www.lmsys.org/blog/2026-10-21-elastic-ep-scaling-nixl"
+          }
+        ]
+      },
+      "completion": {
+        "state": "early_exit",
+        "note": "上轮已交付推荐，持久state中已有；不重复给用户",
+        "early_exit": {
+          "reason": "historical_duplicate",
+          "reference": "runs/real-search-20261026-01/result.json"
+        }
+      }
+    },
+    {
+      "url": "https://x.com/vllm_project/status/2114135647040778667",
+      "post_id": "2114135647040778667",
+      "author": "@vllm_project",
+      "synthetic": false,
+      "lane": "Other",
+      "post_type": "quote",
+      "published_at": "2026-10-24T23:23:11.652000+00:00",
+      "event_key": "vllm:dsv41:pd-wide-ep:2026-10-23",
+      "article_urls": [
+        "https://vllm.ai/blog/2026-10-23-deepseek-v41-flash-pd-wide-ep"
+      ],
+      "edit_ids": [],
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "浏览器原帖详情完整正文；发布时间由X ID时间戳计算，与页面日期对照，非搜索摘要时间。",
+          "locator": "https://x.com/vllm_project/status/2114135647040778667"
+        },
+        "quote": {
+          "presence": "yes",
+          "status": "partial",
+          "note": "嵌入引用可见但必要上下文未读全",
+          "locator": "https://x.com/vllm_project/status/2114135647040778667"
+        },
+        "media": {
+          "presence": "yes",
+          "status": "unavailable",
+          "note": "实际打开并点击媒体；当前公开浏览器显示登录提示，不能视觉核验。",
+          "locator": "https://x.com/vllm_project/status/2114135647040778667/photo/1"
+        },
+        "links": {
+          "presence": "yes",
+          "status": "partial",
+          "note": "主帖和工程文章已读；主帖性能图及必要引用未独立读全，不能把总token吞吐当输出吞吐或收入当利润。",
+          "locator": "https://vllm.ai/blog/2026-10-23-deepseek-v41-flash-pd-wide-ep"
+        }
+      },
+      "review": {
+        "reviewer": "Codex real-post review",
+        "checked_at": "2026-10-26T08:36:32.691221+00:00",
+        "summary_zh": "vLLM AgentX性能优化",
+        "why_now": "本轮主动候选验证；缺口消除后重新判断时效",
+        "identity": "unknown",
+        "identity_reason": "账号与文章互相指向，但本轮未新增独立官方站点到账号链验证",
+        "facts": "unknown",
+        "fact_reason": "文字可读，但必要媒体核验受登录阻挡；性能主张仍按作者报告待核查。",
+        "brand": "unknown",
+        "brand_reason": "必要媒体或引用未读全；不能完成整帖品牌放行",
+        "decision": "hold",
+        "action": "none",
+        "priority": 2,
+        "reason": "存在实际观察到的关键媒体登录障碍；其余未读对象保持原状，不算访问失败。",
+        "novelty_reason": "未命中本地14条历史动作及状态；未证明完整实时官号历史均无重复",
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "substance": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "brand_fit": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          }
+        },
+        "entities": [
+          {
+            "name": "vLLM AgentX性能优化",
+            "role": "open_source_engineering",
+            "behavior": "技术公告/文章分享",
+            "evidence": "https://x.com/vllm_project/status/2114135647040778667"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "vLLM AgentX性能优化的核心技术/性能主张",
+            "status": "unknown",
+            "evidence": "https://vllm.ai/blog/2026-10-23-deepseek-v41-flash-pd-wide-ep"
+          }
+        ]
+      },
+      "quote_url": "https://x.com/i/web/status/2114054289488478256",
+      "completion": {
+        "state": "early_exit",
+        "note": "关键媒体点击后出现登录提示；停止，不声称其他所有对象均读完。",
+        "early_exit": {
+          "reason": "evidence_blocked",
+          "reference": "https://x.com/vllm_project/status/2114135647040778667/photo/1",
+          "blocker": "authentication",
+          "method": "browser-visible-media-click",
+          "outcome": "点击View media后显示Don’t miss what’s happening及Log in/Sign up，未得到媒体像素"
+        }
+      }
+    },
+    {
+      "url": "https://x.com/lmsysorg/status/2114080639381320028",
+      "post_id": "2114080639381320028",
+      "author": "@lmsysorg",
+      "synthetic": false,
+      "lane": "Other",
+      "post_type": "quote",
+      "published_at": "2026-10-24T19:44:36.804000+00:00",
+      "event_key": "sglang:dsv41:deepinfer:2026-10-24",
+      "article_urls": [
+        "https://lmsys.org/blog/2026-10-24-dsv41-deepinfer"
+      ],
+      "edit_ids": [],
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "浏览器原帖详情完整正文；发布时间由X ID时间戳计算，与页面日期对照，非搜索摘要时间。",
+          "locator": "https://x.com/lmsysorg/status/2114080639381320028"
+        },
+        "quote": {
+          "presence": "yes",
+          "status": "full",
+          "note": "已直接打开引用status，原文完整可读；其图片单列media且受登录阻挡。",
+          "locator": "https://x.com/i/web/status/2114071115605877043"
+        },
+        "media": {
+          "presence": "yes",
+          "status": "unavailable",
+          "note": "实际打开并点击媒体；当前公开浏览器显示登录提示，不能视觉核验。",
+          "locator": "https://x.com/sgl_project/status/2114071115605877043/photo/1"
+        },
+        "links": {
+          "presence": "yes",
+          "status": "partial",
+          "note": "浏览器已读博客正文；不再声称文章不可访问。因关键X图已触发硬障碍，未穷尽博客附属图片或继续提交报名。",
+          "locator": "https://lmsys.org/blog/2026-10-24-dsv41-deepinfer"
+        }
+      },
+      "review": {
+        "reviewer": "Codex real-post review",
+        "checked_at": "2026-10-26T08:36:32.691226+00:00",
+        "summary_zh": "SGLang与DeepInfer性能比较",
+        "why_now": "本轮主动候选验证；缺口消除后重新判断时效",
+        "identity": "verified",
+        "identity_reason": "官方sgl-project/sglang仓库README的X链接指向lmsysorg；LMSYS站点确认项目关联",
+        "facts": "unknown",
+        "fact_reason": "文字可读，但必要媒体核验受登录阻挡；性能主张仍按作者报告待核查。",
+        "brand": "unknown",
+        "brand_reason": "必要媒体或引用未读全；不能完成整帖品牌放行",
+        "decision": "hold",
+        "action": "none",
+        "priority": 3,
+        "reason": "存在实际观察到的关键媒体登录障碍；其余未读对象保持原状，不算访问失败。",
+        "novelty_reason": "未命中本地14条历史动作及状态；未证明完整实时官号历史均无重复",
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "substance": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "brand_fit": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          }
+        },
+        "entities": [
+          {
+            "name": "SGLang与DeepInfer性能比较",
+            "role": "open_source_engineering",
+            "behavior": "技术公告/文章分享",
+            "evidence": "https://x.com/lmsysorg/status/2114080639381320028"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "SGLang与DeepInfer性能比较的核心技术/性能主张",
+            "status": "unknown",
+            "evidence": "https://lmsys.org/blog/2026-10-24-dsv41-deepinfer"
+          }
+        ]
+      },
+      "quote_url": "https://x.com/i/web/status/2114071115605877043",
+      "completion": {
+        "state": "early_exit",
+        "note": "关键媒体点击后出现登录提示；停止，不声称其他所有对象均读完。",
+        "early_exit": {
+          "reason": "evidence_blocked",
+          "reference": "https://x.com/sgl_project/status/2114071115605877043/photo/1",
+          "blocker": "authentication",
+          "method": "browser-visible-media-click",
+          "outcome": "点击View media后显示Don’t miss what’s happening及Log in/Sign up，未得到媒体像素"
+        }
+      }
+    },
+    {
+      "url": "https://x.com/lmsysorg/status/2113301090502639666",
+      "post_id": "2113301090502639666",
+      "author": "@lmsysorg",
+      "synthetic": false,
+      "lane": "Other",
+      "post_type": "quote",
+      "published_at": "2026-10-22T16:06:57.868000+00:00",
+      "event_key": "sglang:trainium:beta:2026-10-22",
+      "article_urls": [
+        "https://lmsys.org/blog/2026-10-22-sglang-trainium-beta"
+      ],
+      "edit_ids": [],
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "浏览器原帖详情完整正文；发布时间由X ID时间戳计算，与页面日期对照，非搜索摘要时间。",
+          "locator": "https://x.com/lmsysorg/status/2113301090502639666"
+        },
+        "quote": {
+          "presence": "yes",
+          "status": "full",
+          "note": "已直接打开引用status，原文完整可读；其图片单列media且受登录阻挡。",
+          "locator": "https://x.com/i/web/status/2113299489394205121"
+        },
+        "media": {
+          "presence": "yes",
+          "status": "unavailable",
+          "note": "实际打开并点击媒体；当前公开浏览器显示登录提示，不能视觉核验。",
+          "locator": "https://x.com/sgl_project/status/2113299489394205121/photo/1"
+        },
+        "links": {
+          "presence": "yes",
+          "status": "partial",
+          "note": "浏览器已读博客正文；不再声称文章不可访问。因关键X图已触发硬障碍，未穷尽博客附属图片或继续提交报名。",
+          "locator": "https://lmsys.org/blog/2026-10-22-sglang-trainium-beta"
+        }
+      },
+      "review": {
+        "reviewer": "Codex real-post review",
+        "checked_at": "2026-10-26T08:36:32.691230+00:00",
+        "summary_zh": "SGLang Trainium beta",
+        "why_now": "本轮主动候选验证；缺口消除后重新判断时效",
+        "identity": "verified",
+        "identity_reason": "官方sgl-project/sglang仓库README的X链接指向lmsysorg；LMSYS站点确认项目关联",
+        "facts": "unknown",
+        "fact_reason": "文字可读，但必要媒体核验受登录阻挡；性能主张仍按作者报告待核查。",
+        "brand": "unknown",
+        "brand_reason": "必要媒体或引用未读全；不能完成整帖品牌放行",
+        "decision": "hold",
+        "action": "none",
+        "priority": 4,
+        "reason": "存在实际观察到的关键媒体登录障碍；其余未读对象保持原状，不算访问失败。",
+        "novelty_reason": "未命中本地14条历史动作及状态；未证明完整实时官号历史均无重复",
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "substance": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "brand_fit": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          }
+        },
+        "entities": [
+          {
+            "name": "SGLang Trainium beta",
+            "role": "open_source_engineering",
+            "behavior": "技术公告/文章分享",
+            "evidence": "https://x.com/lmsysorg/status/2113301090502639666"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "SGLang Trainium beta的核心技术/性能主张",
+            "status": "unknown",
+            "evidence": "https://lmsys.org/blog/2026-10-22-sglang-trainium-beta"
+          }
+        ]
+      },
+      "quote_url": "https://x.com/i/web/status/2113299489394205121",
+      "completion": {
+        "state": "early_exit",
+        "note": "关键媒体点击后出现登录提示；停止，不声称其他所有对象均读完。",
+        "early_exit": {
+          "reason": "evidence_blocked",
+          "reference": "https://x.com/sgl_project/status/2113299489394205121/photo/1",
+          "blocker": "authentication",
+          "method": "browser-visible-media-click",
+          "outcome": "点击View media后显示Don’t miss what’s happening及Log in/Sign up，未得到媒体像素"
+        }
+      }
+    },
+    {
+      "url": "https://x.com/vllm_project/status/2113451250264240545",
+      "post_id": "2113451250264240545",
+      "author": "@vllm_project",
+      "synthetic": false,
+      "lane": "Model",
+      "post_type": "quote",
+      "published_at": "2026-10-23T02:03:38.745000+00:00",
+      "event_key": "minimax:m3.1-flash:release",
+      "article_urls": [
+        "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+      ],
+      "edit_ids": [],
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "浏览器原帖详情完整正文；发布时间由X ID时间戳计算，与页面日期对照，非搜索摘要时间。",
+          "locator": "https://x.com/vllm_project/status/2113451250264240545"
+        },
+        "quote": {
+          "presence": "yes",
+          "status": "partial",
+          "note": "嵌入引用可见但必要上下文未读全",
+          "locator": "https://x.com/vllm_project/status/2113451250264240545"
+        },
+        "media": {
+          "presence": "yes",
+          "status": "unavailable",
+          "note": "视频无法播放",
+          "locator": "https://x.com/vllm_project/status/2113451250264240545"
+        },
+        "links": {
+          "presence": "yes",
+          "status": "unavailable",
+          "note": "主帖全文可读，但1/5线程未读全、视频显示无法播放、引用截断；模型材料未核验，且超过48小时默认窗口。",
+          "locator": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+        }
+      },
+      "review": {
+        "reviewer": "Codex real-post review",
+        "checked_at": "2026-10-26T08:36:32.691234+00:00",
+        "summary_zh": "MiniMax M3.1 Flash的vLLM支持",
+        "why_now": "本轮主动候选验证；缺口消除后重新判断时效",
+        "identity": "unknown",
+        "identity_reason": "账号与文章互相指向，但本轮未新增独立官方站点到账号链验证",
+        "facts": "unknown",
+        "fact_reason": "主帖全文可读，但1/5线程未读全、视频显示无法播放、引用截断；模型材料未核验，且超过48小时默认窗口。",
+        "brand": "unknown",
+        "brand_reason": "必要媒体或引用未读全；不能完成整帖品牌放行",
+        "decision": "hold",
+        "action": "none",
+        "priority": 5,
+        "reason": "已超Model默认48小时；保留原视频/线程缺口，不继续为过期新闻消耗审核。",
+        "novelty_reason": "未命中本地14条历史动作及状态；未证明完整实时官号历史均无重复",
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "substance": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "brand_fit": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          }
+        },
+        "entities": [
+          {
+            "name": "MiniMax M3.1 Flash的vLLM支持",
+            "role": "model_support",
+            "behavior": "技术公告/文章分享",
+            "evidence": "https://x.com/vllm_project/status/2113451250264240545"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "MiniMax M3.1 Flash的vLLM支持的核心技术/性能主张",
+            "status": "unknown",
+            "evidence": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+          }
+        ]
+      },
+      "quote_url": "https://x.com/i/web/status/2113436864904610008",
+      "completion": {
+        "state": "early_exit",
+        "note": "模型新闻已超48h，未找到新的当前分享理由，先停止昂贵媒体读取。",
+        "early_exit": {
+          "reason": "stale",
+          "reference": "2026-10-23T02:03:38.745000+00:00"
+        }
+      }
+    },
+    {
+      "url": "https://x.com/lmsysorg/status/2112625536350740896",
+      "post_id": "2112625536350740896",
+      "author": "@lmsysorg",
+      "synthetic": false,
+      "lane": "Other",
+      "post_type": "original",
+      "published_at": "2026-10-20T19:22:33.207000+00:00",
+      "event_key": "sglang:omni:interactive-runtime:2026-10-20",
+      "article_urls": [
+        "https://www.sglang.io/blog/omni-interactive-runtime"
+      ],
+      "edit_ids": [],
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "浏览器原帖详情完整正文；发布时间由X ID时间戳计算，与页面日期对照，非搜索摘要时间。",
+          "locator": "https://x.com/lmsysorg/status/2112625536350740896"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "原帖详情未见引用卡"
+        },
+        "media": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "原帖仅文章预览卡，没有独立上传图/视频"
+        },
+        "links": {
+          "presence": "yes",
+          "status": "full",
+          "note": "已读核心架构/评测方法、完整结果表/脚注、使用与Known Issues；六张架构图逐张视觉核查。可选YouTube演示未播放，不用于支持评测数字或额外功能主张。",
+          "locator": "https://www.sglang.io/blog/omni-interactive-runtime"
+        }
+      },
+      "review": {
+        "reviewer": "Codex real-post review",
+        "checked_at": "2026-10-26T08:36:32.691236+00:00",
+        "summary_zh": "SGLang Omni全双工运行时",
+        "why_now": "近7日工程深读，适合向开发者解释全双工不只看延迟，也要看打断策略与session状态。",
+        "identity": "verified",
+        "identity_reason": "官方sgl-project/sglang仓库README的X链接指向lmsysorg；LMSYS站点确认项目关联",
+        "facts": "verified",
+        "fact_reason": "作者报告的0.17s/1.32s与表格一致，单H200/单会话/关闭thinking条件明确；小样本噪声与VAD误打断限制已读。未复现实验、未观看可选演示。",
+        "brand": "acceptable",
+        "brand_reason": "围绕开源交互运行时和架构取舍；模型/工具作为技术对象，不是重叠推理平台的注册推广。",
+        "decision": "recommend",
+        "action": "pure_repost",
+        "priority": 1,
+        "reason": "核心原帖主张已对照一手文章、结果表和六图；支持作为工程方法分享，不声称独立复现实验。",
+        "novelty_reason": "未命中现有14条历史与state；仍未取得官号完整实时历史。",
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "substance": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "brand_fit": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "可读内容有技术线索，证据尚不完整"
+          }
+        },
+        "entities": [
+          {
+            "name": "SGLang Omni全双工运行时",
+            "role": "open_source_engineering",
+            "behavior": "技术公告/文章分享",
+            "evidence": "https://x.com/lmsysorg/status/2112625536350740896"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "原帖单会话H200级联配置的作者报告延迟与文章结果表相符；不外推为通用SLA或独立复现实验。",
+            "status": "verified",
+            "evidence": "https://www.sglang.io/blog/omni-interactive-runtime#results"
+          }
+        ]
+      },
+      "completion": {
+        "state": "ready",
+        "note": "核心帖子与所需一手说明/图表已完成；可选演示不支持本次判断，不强制无关外链无限展开。",
+        "checks": {
+          "text": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "browser-post-detail",
+                "locator": "https://x.com/lmsysorg/status/2112625536350740896",
+                "outcome": "浏览器原帖详情完整正文；发布时间由X ID时间戳计算，与页面日期对照，非搜索摘要时间。"
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "browser-reading-and-visual-inspection",
+                "locator": "https://www.sglang.io/blog/omni-interactive-runtime",
+                "outcome": "已读核心架构/评测方法、完整结果表/脚注、使用与Known Issues；六张架构图逐张视觉核查。可选YouTube演示未播放，不用于支持评测数字或额外功能主张。"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "review_process_version": 1
+}

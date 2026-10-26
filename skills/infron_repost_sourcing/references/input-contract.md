@@ -39,6 +39,10 @@ Material progress on a shared event needs `material_update: true`, `previous_ref
 
 ## Exports and state
 
+An additional early-exit reason `evidence_blocked` requires `blocker: authentication | deleted_private | security_block | unplayable`, `method`, `outcome` and a concrete `reference` to the necessary object. Other skipped objects retain honest partial status. It cannot recommend or treat a single ordinary fetch failure as a hard barrier.
+
+For newly produced bundles set `review_process_version: 1`. Every candidate needs `completion: {state: ready | blocked | deferred | early_exit, note, checks}`. `checks` contains exactly text/quote/media/links, each `{disposition: resolved | blocked | pending | not_present, attempts: [{method, locator, outcome}], blocker?}`. Use `not_present` only with matching evidence absence. Use `resolved` only with matching full evidence. For an unresolved object use a blocker of `authentication`, `deleted_private`, `security_block`, `unplayable`, `budget_exhausted`, or `access_failed`. Access-failed requires two distinct appropriate methods; hard barriers need one observed attempt; a budget limit is unfinished work, not a terminal Hold. Pending requires `state: deferred`. A ready candidate must have all objects resolved/absent. Early exits additionally need `early_exit: {reason: historical_duplicate | stale | disqualified, reference}`; this permits stopping before expensive reads without inventing access. The script validates declared process, not external observations. Old bundles omit the version and export `completion_enforced=false`.
+
 - `brief.md`: 0–2 main choices, Hold/Reject/alternate table, coverage/resources.
 - `result.json`: full audit, computed verdict/reasons alongside preserved reviewer decision, rule/source version.
 - `candidates.csv`: compact UTF-8 BOM index; formula-like strings escaped.

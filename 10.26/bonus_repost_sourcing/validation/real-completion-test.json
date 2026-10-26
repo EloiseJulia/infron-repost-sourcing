@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "skills/infron_repost_sourcing/scripts/repost.py",
+    "run",
+    "--input",
+    "10.26/bonus_repost_sourcing/samples/real-completion-batch-20261026.json",
+    "--state",
+    "10.26/bonus_repost_sourcing/state/repost.sqlite",
+    "--out",
+    "10.26/bonus_repost_sourcing/runs/real-completion-20261026-01",
+    "--history",
+    "10.26/bonus_repost_sourcing/04_History_Seed.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"partial_coverage\", \"input\": 6, \"input_duplicates\": 0, \"reviewed\": 6, \"recommended\": 1, \"hold\": 5, \"deferred\": 0, \"reject\": 0, \"alternates\": 0}\n",
+  "stderr": ""
+}

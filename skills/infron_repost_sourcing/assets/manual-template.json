@@ -1,5 +1,6 @@
 {
   "schema_version": "1.0",
+  "review_process_version": 1,
   "mode": "manual",
   "coverage": {
     "discovery": "not_implemented",
@@ -21,6 +22,16 @@
       "event_key": "synthetic:replace-with-specific-event",
       "article_urls": [],
       "edit_ids": [],
+      "completion": {
+        "state": "deferred",
+        "note": "SYNTHETIC TEMPLATE: no reading has been performed; replace with actual attempts.",
+        "checks": {
+          "text": {"disposition": "pending", "attempts": []},
+          "quote": {"disposition": "pending", "attempts": []},
+          "media": {"disposition": "pending", "attempts": []},
+          "links": {"disposition": "pending", "attempts": []}
+        }
+      },
       "evidence": {
         "text": {
           "presence": "yes",

@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_batch_enforcement_and_deferred_export (__main__.Completion.test_batch_enforcement_and_deferred_export) ... ok\ntest_hard_barrier_and_budget (__main__.Completion.test_hard_barrier_and_budget) ... ok\ntest_missing_ledger (__main__.Completion.test_missing_ledger) ... ok\ntest_no_false_absence_or_early_recommendation (__main__.Completion.test_no_false_absence_or_early_recommendation) ... ok\ntest_one_failed_method_needs_followup (__main__.Completion.test_one_failed_method_needs_followup) ... ok\ntest_pending_is_not_completed_hold (__main__.Completion.test_pending_is_not_completed_hold) ... ok\ntest_ready (__main__.Completion.test_ready) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.012s\n\nOK\n"
+}

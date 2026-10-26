@@ -1,4 +1,4 @@
 interface:
   display_name: "Infron Repost Sourcing"
-  short_description: "Review evidence and shortlist Infron reposts"
-  default_prompt: "Use $infron-repost-sourcing to review supplied X posts and export an evidence-based shortlist."
+  short_description: "Find posts, complete evidence, and shortlist reposts"
+  default_prompt: "Use $infron-repost-sourcing to find X candidates, resolve necessary evidence, and export a shortlist with blockers separated from unfinished work."

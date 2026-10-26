@@ -250,7 +250,7 @@ def brief(result):
              ('**SYNTHETIC FIXTURE — 非真实候选。**' if result['fixture'] else '**手工输入复核 — 未实现自动发现。**'), '',
              f"Run `{result['run_id']}` · {result['as_of']} · rules `{result['rules_version']}`", '',
              f"状态：{s['status']}；输入 {s['input']}，同批重复 {s['input_duplicates']}，深读 {s['reviewed']}。",
-             f"主推荐 {s['recommended']}；Hold {s['hold']}；Reject {s['reject']}；合格备选 {s['alternates']}。", '',
+             f"主推荐 {s['recommended']}；Hold {s['hold']}；未完成 {s.get('deferred',0)}；Reject {s['reject']}；合格备选 {s['alternates']}。", '',
              '本结果仅覆盖所供材料；不代表全 X 搜索结论。recommend 不等于批准或已发布。', '',
              '## 主推荐', '']
     chosen = [c for c in result['candidates'] if c['selected']]
@@ -274,7 +274,8 @@ def brief(result):
     lines += ['## Hold / Reject / 备选', '', '| 帖子 | 结论 | 原因 |', '|---|---|---|']
     for c in result['candidates']:
         if not c['selected']:
-            label = 'alternate' if c['verdict'] == 'recommend' else c['verdict']
+            label = ('deferred（未完成）' if c.get('review_status') == 'deferred' else
+                     'alternate' if c['verdict'] == 'recommend' else c['verdict'])
             detail = '; '.join(c['reason_codes']) + ' — ' + c['review']['reason']
             lines.append(f"| [{safe_md(c['author'])}]({c['url']}) | {label} | {safe_md(detail)} |")
     lines += ['', '## 覆盖与资源', '', f"窗口：{safe_md(result['coverage']['window'])}。", '',
@@ -285,6 +286,55 @@ def brief(result):
               '语义判断由运行该 skill 的 agent/editor 提供，未测量其 token、耗时或成本。', '',
               '反馈：使用 feedback 命令记录 accept/reject/defer/posted；只记录用户明确给出的事实。', '']
     return '\n'.join(lines)
+
+
+def validate_completion(c):
+    x = c.get('completion', {})
+    require(isinstance(x, dict) and x.get('state') in ('ready','blocked','deferred','early_exit')
+            and nonempty(x.get('note')), 'completion state/note required')
+    if x['state'] == 'early_exit':
+        stop = x.get('early_exit', {})
+        require(stop.get('reason') in ('historical_duplicate','stale','disqualified','evidence_blocked') and nonempty(stop.get('reference')),
+                'early exit needs reason and evidence reference')
+        if stop['reason'] == 'evidence_blocked':
+            require(stop.get('blocker') in ('authentication','deleted_private','security_block','unplayable')
+                    and nonempty(stop.get('method')) and nonempty(stop.get('outcome')),
+                    'evidence-blocked exit needs observed hard barrier')
+        require(c['review']['decision'] != 'recommend', 'early exit cannot recommend')
+        return
+    checks = x.get('checks', {})
+    require(isinstance(checks, dict) and set(checks) == set(PARTS), 'completion checks must cover four evidence parts')
+    pending, blocked = False, False
+    for part in PARTS:
+        check = checks[part]
+        require(isinstance(check, dict), 'completion check must be an object')
+        d = check.get('disposition')
+        require(d in ('resolved','blocked','pending','not_present'), 'invalid completion disposition')
+        e = c['evidence'][part]
+        attempts = check.get('attempts', [])
+        require(isinstance(attempts, list) and all(isinstance(a,dict) and all(nonempty(a.get(k)) for k in
+                ('method','locator','outcome')) for a in attempts), 'invalid evidence attempts')
+        if d == 'not_present':
+            require(e['presence'] == 'no' and e['status'] == 'not_present', 'false completion absence')
+        elif d == 'resolved':
+            require(e['presence'] == 'yes' and e['status'] == 'full' and attempts, 'resolved evidence needs full reading and attempt')
+        else:
+            require(e['status'] in ('partial','unavailable'), 'unresolved completion contradicts evidence')
+            if d == 'pending':
+                pending = True
+            else:
+                blocked = True
+                blocker = check.get('blocker')
+                require(blocker in ('authentication','deleted_private','security_block','unplayable','budget_exhausted','access_failed'), 'name concrete blocker')
+                require(attempts, 'blocked evidence needs an actual attempt')
+                if blocker == 'access_failed':
+                    require(len({a['method'] for a in attempts}) >= 2, 'one failed route is not terminal access failure')
+                if blocker == 'budget_exhausted':
+                    pending = True
+    require(not pending or x['state'] == 'deferred', 'unfinished work must be deferred')
+    require(x['state'] != 'ready' or not (pending or blocked), 'ready cannot contain gaps')
+    require(x['state'] != 'blocked' or blocked, 'blocked state needs an evidence blocker')
+    require(x['state'] == 'ready' or c['review']['decision'] != 'recommend', 'unfinished/blocked review cannot recommend')
 
 
 def process(bundle, state, out, history=None, fixture=False, as_of=None):
@@ -306,6 +356,11 @@ def process(bundle, state, out, history=None, fixture=False, as_of=None):
     normalized = [normalize(c) for c in items]
     require(all(c['synthetic'] == fixture for c in normalized), 'real/fixture flags do not match run mode')
     verdicts = [validate_review(c, at, config) for c in normalized]
+    process_version = bundle.get('review_process_version')
+    require(process_version is None or type(process_version) is int and process_version == 1, 'unsupported review process version')
+    if process_version == 1:
+        for c in normalized:
+            validate_completion(c)
     # Validate the entire batch before creating state or outputs.
     out = Path(out)
     require(not out.exists(), 'output directory already exists; choose a fresh run directory')
@@ -329,6 +384,7 @@ def process(bundle, state, out, history=None, fixture=False, as_of=None):
                 if exact or not c['review'].get('material_update'):
                     verdict, reasons = 'hold', reasons + ['historical_duplicate']
             c.update(verdict=verdict, reason_codes=reasons, selected=False,
+                     review_status=c.get('completion',{}).get('state','legacy_untracked'),
                      duplicate_matches=[dict(zip(('key','post_id','kind','reference'), m)) for m in matches])
             results.append(c)
         # Priority is an explicit semantic editor ordinal, never a keyword or random score.
@@ -345,16 +401,21 @@ def process(bundle, state, out, history=None, fixture=False, as_of=None):
                 lanes.add(c['lane'])
                 selected += 1
         count = lambda v: sum(c['verdict'] == v for c in results)
-        status = ('discovery_blocked' if coverage['status'] == 'blocked' else
+        deferred = sum(c.get('review_status') == 'deferred' for c in results)
+        status = ('review_incomplete' if deferred else
+                  'discovery_blocked' if coverage['status'] == 'blocked' else
                   'partial_coverage' if coverage['status'] == 'partial' else
                   'manual_review_complete' if selected else 'manual_no_qualified_candidates')
         result = dict(run_id=run_id, as_of=at.isoformat(), fixture=fixture, mode='manual',
                       automatic_discovery=False, rules_version=config['rules_version'],
+                      completion_enforced=process_version == 1,
                       source_pool_version=config['source_pool_version'], coverage=coverage,
                       budget={k:config[k] for k in ('max_input','max_reviewed','max_recommendations')},
                       usage={'api_requests':0,'script_model_calls':0,'script_cost_usd':0,'agent_cost':'not_measured'},
                       summary=dict(status=status,input=len(items),input_duplicates=input_duplicates,
-                                   reviewed=len(normalized),recommended=selected,hold=count('hold'),reject=count('reject'),
+                                   reviewed=len(normalized),recommended=selected,
+                                   hold=sum(c['verdict']=='hold' and c.get('review_status')!='deferred' for c in results),
+                                   deferred=deferred,reject=count('reject'),
                                    alternates=count('recommend')-selected), candidates=results)
         digest = hashlib.sha256(json.dumps(bundle,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
         db.execute('INSERT INTO runs VALUES (?,?,?,?,?)', (run_id,at.isoformat(),config['rules_version'],digest,json.dumps(result,ensure_ascii=False)))
@@ -368,11 +429,11 @@ def process(bundle, state, out, history=None, fixture=False, as_of=None):
         (out / 'brief.md').write_text(brief(result),encoding='utf-8')
         with (out / 'candidates.csv').open('w',encoding='utf-8-sig',newline='') as f:
             w = csv.writer(f)
-            w.writerow(['post_id','url','author','lane','verdict','selected','reason_codes','summary_zh'])
+            w.writerow(['post_id','url','author','lane','verdict','selected','reason_codes','summary_zh','review_status'])
             for c in results:
                 # Prefix spreadsheet formula payloads without modifying canonical JSON.
                 row = [c['post_id'],c['url'],c['author'],c['lane'],c['verdict'],c['selected'],
-                       ';'.join(c['reason_codes']),c['review']['summary_zh']]
+                       ';'.join(c['reason_codes']),c['review']['summary_zh'],c['review_status']]
                 w.writerow(["'"+x if isinstance(x,str) and x.startswith(('=','+','-','@','\t','\r')) else x for x in row])
         db.commit()
         return result

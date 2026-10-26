@@ -1,0 +1,7 @@
+﻿post_id,url,author,lane,verdict,selected,reason_codes,summary_zh
+2113093747261243448,https://x.com/i/web/status/2113093747261243448,'@lmsysorg,Other,hold,False,editorial_hold;historical_duplicate,SGLang弹性EP扩容
+2114135647040778667,https://x.com/i/web/status/2114135647040778667,'@vllm_project,Other,hold,False,incomplete_evidence;identity_unverified;facts_unverified;brand_unknown;editorial_hold,vLLM AgentX性能优化
+2114080639381320028,https://x.com/i/web/status/2114080639381320028,'@lmsysorg,Other,hold,False,incomplete_evidence;facts_unverified;brand_unknown;editorial_hold,SGLang与DeepInfer性能比较
+2113301090502639666,https://x.com/i/web/status/2113301090502639666,'@lmsysorg,Other,hold,False,incomplete_evidence;facts_unverified;brand_unknown;editorial_hold,SGLang Trainium beta
+2113451250264240545,https://x.com/i/web/status/2113451250264240545,'@vllm_project,Model,hold,False,incomplete_evidence;identity_unverified;facts_unverified;brand_unknown;outside_editorial_window;editorial_hold,MiniMax M3.1 Flash的vLLM支持
+2112625536350740896,https://x.com/i/web/status/2112625536350740896,'@lmsysorg,Other,recommend,True,editorial_pass,SGLang Omni全双工运行时

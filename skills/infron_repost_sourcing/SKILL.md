@@ -6,6 +6,7 @@ description: Find and review potential X reposts for Infron, check technical val
 # Infron Repost Sourcing v0.1
 
 Read [editorial rules](references/editorial-rules.md), then [input contract](references/input-contract.md).
+Read and apply [evidence completion](references/evidence-completion.md) before finalizing a real review. Use `review_process_version: 1` for new reviewed bundles. Finish accessible originals, threads, figures and articles before issuing a terminal evidence Hold; label remaining work deferred instead of completed.
 Read the project's current `workflows/infron-content/02_Brand_Context.md` when available; prefer newer explicit user/mentor feedback over historical tendencies. Preserve the supplied v0.2 design.
 
 ## Start and choose an honest mode
@@ -56,4 +57,5 @@ Return the brief path, main candidates if any, coverage/access gaps, and the exa
 Do not post, like, message, change Lists/follows, buy services, deploy or schedule work.
 
 Run `python skills/infron_repost_sourcing/scripts/test_repost.py` after code changes. Semantic quality and mentor acceptance require real feedback; passing this test suite does not establish either.
+Also run `python skills/infron_repost_sourcing/scripts/test_completion.py` to verify completion/deferred enforcement.
 

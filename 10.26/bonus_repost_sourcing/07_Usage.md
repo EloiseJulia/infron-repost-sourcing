@@ -1,5 +1,7 @@
 # Repost Sourcing v0.1 使用说明
 
+最新改进见 `09_Completion_Improvement.md`：新审核必须启用 `review_process_version: 1` 并填写completion尝试记录。先补读可访问材料；真正障碍为Hold，未完成工作单列deferred，不把待办冒充完成审核。当前规则0.1.1，旧运行文件保持原样。
+
 当前版本为 **项目内手工输入筛选模式**。自动发现未实现；没有发布、购买、部署或调度。
 
 接续补充：已加入AI通过宿主搜索工具主动找候选的流程，不必由用户先给链接。CLI自动采集仍未实现。6条新真实帖子试用得到1推荐、5Hold，详见 `08_Real_Search_Trial.md`；此前Arena单条样例保留为历史测试，不再作为当前唯一真实验证。

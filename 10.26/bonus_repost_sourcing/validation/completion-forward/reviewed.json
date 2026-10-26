@@ -1,0 +1,800 @@
+{
+  "schema_version": "1.0",
+  "mode": "manual",
+  "coverage": {
+    "discovery": "not_implemented",
+    "status": "partial",
+    "window": "SYNTHETIC supplied fixture, 2026-10-26; evaluated at 14:00 +08",
+    "success": [
+      "Read all six supplied synthetic records; no network, live post verification, history import or human feedback.",
+      "Fully reviewed the supplied evaluator102 and cache105 descriptions; source identity and evidence are fixture stipulations only.",
+      "Aggregator103 rejected from explicit transcribed overlap CTA without claiming visual inspection."
+    ],
+    "failed": [
+      "101 and106 contain conflicting publication timestamps;106 also describes another author while structured handle equals101. No resolution supplied.",
+      "104 video contains the only setup/results but is unavailable; no access attempt logs or playable media supplied. Evidence completion is deferred, not a terminal access determination.",
+      "Actual prior sharing history is outside supplied facts; novelty assessed only against this six-record batch."
+    ]
+  },
+  "candidates": [
+    {
+      "url": "https://x.com/i/web/status/900000000000000101",
+      "author": "@fixtureauthor",
+      "synthetic": true,
+      "lane": "Model",
+      "post_type": "original",
+      "event_key": "model:cedar:v2",
+      "published_at": null,
+      "article_urls": [],
+      "edit_ids": [
+        "900000000000000101"
+      ],
+      "supplied_material": "SYNTHETIC: Cedar model lab releases Cedar v2 weights with reproducible evaluation scripts; compares Cedar v2 to Pine v1. No platform signup/discount. All text is supplied; no media, quote or external material. Identity stipulated by fixture; published 2026-10-26 11:00 +08.",
+      "post_id": "900000000000000101",
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "Read the entire supplied synthetic description. Statements are fixture stipulations, not live-source or experimental verification.",
+          "locator": "fixture:forward-input.json#candidates/0/supplied_material"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no quote; no live absence inference."
+        },
+        "media": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no media; no live absence inference."
+        },
+        "links": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no links; no live absence inference."
+        }
+      },
+      "completion": {
+        "state": "ready",
+        "note": "Supplied text fully read, but source-internal date conflicts remain; ready describes object reading only, not verified facts.",
+        "checks": {
+          "text": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "read_supplied_fixture",
+                "locator": "fixture:forward-input.json#candidates/0/supplied_material",
+                "outcome": "Read complete supplied synthetic text and declared object scope."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "not_present",
+            "attempts": []
+          }
+        }
+      },
+      "input_publication_metadata": "2026-10-26T12:00:00+08:00",
+      "review": {
+        "reviewer": "completion-forward synthetic reviewer",
+        "checked_at": "2026-10-26T14:00:00+08:00",
+        "summary_zh": "Cedar v2 发布权重并提供可复现评测脚本，含 Pine v1 对比；发布时间记录有冲突。",
+        "why_now": "Model release has useful engineering assets; source metadata says12:00 but supplied narrative says11:00 +08, so exact timing is unresolved.",
+        "brand_reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable.",
+        "fact_reason": "Core technical description accepted solely as fixture stipulation; timestamp conflict unresolved.",
+        "identity_reason": "Identity/role accepted only as synthetic fixture stipulation; no live account verification performed.",
+        "reason": "Model release has useful engineering assets; source metadata says12:00 but supplied narrative says11:00 +08, so exact timing is unresolved.",
+        "novelty_reason": "Same Cedar v2 event as106; this is the more direct lab source within this batch. No actual historical sharing record was supplied.",
+        "decision": "hold",
+        "identity": "verified",
+        "facts": "unknown",
+        "brand": "acceptable",
+        "action": "none",
+        "priority": 3,
+        "quality": {
+          "audience_value": {
+            "level": "high",
+            "reason": "Weights and evaluation scripts are useful to model developers."
+          },
+          "substance": {
+            "level": "high",
+            "reason": "Fixture stipulates weights and reproducible evaluation scripts; no performance numbers are invented."
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "Both inconsistent times are same-day, but exact publication remains unresolved."
+          },
+          "brand_fit": {
+            "level": "high",
+            "reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable."
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "Same Cedar v2 event as106; this is the more direct lab source within this batch. No actual historical sharing record was supplied."
+          }
+        },
+        "entities": [
+          {
+            "name": "Cedar v2",
+            "role": "model",
+            "behavior": "release mention",
+            "evidence": "fixture:forward-input.json#candidates/0/supplied_material"
+          },
+          {
+            "name": "Pine v1",
+            "role": "comparison model",
+            "behavior": "compared with Cedar v2",
+            "evidence": "fixture:forward-input.json#candidates/0/supplied_material"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "Fixture says Cedar v2 weights and reproducible evaluation scripts are released.",
+            "status": "verified",
+            "evidence": "fixture:forward-input.json#candidates/0/supplied_material; verified only within supplied synthetic facts; no real-world replication."
+          },
+          {
+            "claim": "Exact publication timestamp is established.",
+            "status": "unknown",
+            "evidence": "Structured published_at=2026-10-26T12:00:00+08:00 conflicts with supplied narrative; no authority rule or correction supplied."
+          }
+        ],
+        "material_update": false
+      }
+    },
+    {
+      "url": "https://x.com/i/web/status/900000000000000102",
+      "author": "@fixtureauthor",
+      "synthetic": true,
+      "lane": "Model",
+      "post_type": "original",
+      "event_key": "eval:cedar-v2:2026-10-26",
+      "published_at": "2026-10-26T12:00:00+08:00",
+      "article_urls": [],
+      "edit_ids": [
+        "900000000000000102"
+      ],
+      "supplied_material": "SYNTHETIC: Independent evaluator compares Cedar v2 and Pine v1 under 100 identical coding tasks, publishes per-task success and cost methodology in text. No platform ad. All evidence supplied; identity stipulated. No media/quote/links. Published 2026-10-26 12:00 +08.",
+      "post_id": "900000000000000102",
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "Read the entire supplied synthetic description. Statements are fixture stipulations, not live-source or experimental verification.",
+          "locator": "fixture:forward-input.json#candidates/1/supplied_material"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no quote; no live absence inference."
+        },
+        "media": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no media; no live absence inference."
+        },
+        "links": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no links; no live absence inference."
+        }
+      },
+      "completion": {
+        "state": "ready",
+        "note": "All available supplied fixture objects reviewed; absence is explicit. No external opening actions performed.",
+        "checks": {
+          "text": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "read_supplied_fixture",
+                "locator": "fixture:forward-input.json#candidates/1/supplied_material",
+                "outcome": "Read complete supplied synthetic text and declared object scope."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "not_present",
+            "attempts": []
+          }
+        }
+      },
+      "review": {
+        "reviewer": "completion-forward synthetic reviewer",
+        "checked_at": "2026-10-26T14:00:00+08:00",
+        "summary_zh": "独立评测者在100道相同编程任务上比较 Cedar v2 与 Pine v1，并说明逐任务成功率及成本方法。",
+        "why_now": "Same-day evaluation provides a concrete comparison scope and cost methodology; do not generalize beyond those100 tasks.",
+        "brand_reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable.",
+        "fact_reason": "Core claims follow only supplied synthetic description; no invented numerical outcome or independent verification.",
+        "identity_reason": "Identity/role accepted only as synthetic fixture stipulation; no live account verification performed.",
+        "reason": "Same-day evaluation provides a concrete comparison scope and cost methodology; do not generalize beyond those100 tasks.",
+        "novelty_reason": "Distinct independent evaluation event; adds comparative method beyond the release repetition in101/106. Actual history was not supplied.",
+        "decision": "recommend",
+        "identity": "verified",
+        "facts": "verified",
+        "brand": "acceptable",
+        "action": "pure_repost",
+        "priority": 2,
+        "quality": {
+          "audience_value": {
+            "level": "high",
+            "reason": "Identical coding tasks and cost method help readers assess practical tradeoffs."
+          },
+          "substance": {
+            "level": "high",
+            "reason": "Fixture specifies100 identical tasks and per-task/cost methodology; results are author-reported, not independently replicated."
+          },
+          "timeliness": {
+            "level": "high",
+            "reason": "Supplied consistent publication time is2026-10-26 12:00 +08, two hours before fixture evaluation."
+          },
+          "brand_fit": {
+            "level": "high",
+            "reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable."
+          },
+          "increment": {
+            "level": "high",
+            "reason": "Distinct independent evaluation event; adds comparative method beyond the release repetition in101/106. Actual history was not supplied."
+          }
+        },
+        "entities": [
+          {
+            "name": "Cedar v2",
+            "role": "model",
+            "behavior": "evaluation comparison",
+            "evidence": "fixture:forward-input.json#candidates/1/supplied_material"
+          },
+          {
+            "name": "Pine v1",
+            "role": "comparison model",
+            "behavior": "compared with Cedar v2",
+            "evidence": "fixture:forward-input.json#candidates/1/supplied_material"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "Fixture stipulates100 identical coding tasks, per-task success reporting and cost methodology.",
+            "status": "verified",
+            "evidence": "fixture:forward-input.json#candidates/1/supplied_material; verified only within supplied synthetic facts; no real-world replication."
+          }
+        ],
+        "material_update": false
+      }
+    },
+    {
+      "url": "https://x.com/i/web/status/900000000000000103",
+      "author": "@fixtureauthor",
+      "synthetic": true,
+      "lane": "Model",
+      "post_type": "original",
+      "event_key": "model:cedar:aggregator-ad",
+      "published_at": "2026-10-26T12:00:00+08:00",
+      "article_urls": [],
+      "edit_ids": [
+        "900000000000000103"
+      ],
+      "supplied_material": "SYNTHETIC: Official model lab announces Cedar v2. Image text reads: Try Cedar and 100 other models on MergeAPI; create an account at mergeapi.example. Fixture states MergeAPI sells multi-model inference aggregation overlapping Infron. Image is fully transcribed; no quote or other links. Published 2026-10-26 12:00 +08.",
+      "post_id": "900000000000000103",
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "Read the entire supplied synthetic description. Statements are fixture stipulations, not live-source or experimental verification.",
+          "locator": "fixture:forward-input.json#candidates/2/supplied_material"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no quote; no live absence inference."
+        },
+        "media": {
+          "presence": "yes",
+          "status": "partial",
+          "locator": "fixture:forward-input.json#candidates/2/supplied_material",
+          "note": "Only supplied image-text transcription read; no pixels inspected. Explicit signup CTA plus stipulated overlap are already disqualifying."
+        },
+        "links": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no links; no live absence inference."
+        }
+      },
+      "completion": {
+        "state": "early_exit",
+        "note": "Stopped on explicit overlapping-platform signup CTA in supplied fixture; no claim to have inspected image pixels.",
+        "checks": {
+          "text": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "read_supplied_fixture",
+                "locator": "fixture:forward-input.json#candidates/2/supplied_material",
+                "outcome": "Read complete supplied synthetic text and declared object scope."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "pending",
+            "attempts": [
+              {
+                "method": "read_supplied_transcription",
+                "locator": "fixture:forward-input.json#candidates/2/supplied_material",
+                "outcome": "Read CTA transcription only; no actual visual available."
+              }
+            ]
+          },
+          "links": {
+            "disposition": "not_present",
+            "attempts": []
+          }
+        },
+        "early_exit": {
+          "reason": "disqualified",
+          "reference": "fixture:forward-input.json#candidates/2/supplied_material"
+        }
+      },
+      "review": {
+        "reviewer": "completion-forward synthetic reviewer",
+        "checked_at": "2026-10-26T14:00:00+08:00",
+        "summary_zh": "Cedar v2 官方案例图片引导注册 MergeAPI；该服务的多模型推理聚合业务与 Infron 重叠。",
+        "why_now": "Same-day release attention does not remove the explicit competing-platform signup promotion.",
+        "brand_reason": "Explicit MergeAPI signup CTA promotes a stipulated business-overlapping inference aggregator.",
+        "fact_reason": "Core claims follow only supplied synthetic description; no invented numerical outcome or independent verification.",
+        "identity_reason": "Identity/role accepted only as synthetic fixture stipulation; no live account verification performed.",
+        "reason": "Same-day release attention does not remove the explicit competing-platform signup promotion.",
+        "novelty_reason": "Same underlying model release as101; CTA does not add suitable technical increment. Actual history was not supplied.",
+        "decision": "reject",
+        "identity": "verified",
+        "facts": "verified",
+        "brand": "overlap_promotion",
+        "action": "none",
+        "priority": 6,
+        "quality": {
+          "audience_value": {
+            "level": "low",
+            "reason": "Signup promotion dominates the supplied share proposition."
+          },
+          "substance": {
+            "level": "low",
+            "reason": "Supplied substantive addition is an overlapping platform CTA."
+          },
+          "timeliness": {
+            "level": "high",
+            "reason": "Supplied consistent publication time is2026-10-26 12:00 +08, two hours before fixture evaluation."
+          },
+          "brand_fit": {
+            "level": "low",
+            "reason": "Explicit MergeAPI signup CTA promotes a stipulated business-overlapping inference aggregator."
+          },
+          "increment": {
+            "level": "low",
+            "reason": "Same underlying model release as101; CTA does not add suitable technical increment. Actual history was not supplied."
+          }
+        },
+        "entities": [
+          {
+            "name": "Cedar v2 lab",
+            "role": "official model source",
+            "behavior": "announces model with platform promotion",
+            "evidence": "fixture:forward-input.json#candidates/2/supplied_material"
+          },
+          {
+            "name": "MergeAPI",
+            "role": "multi-model inference aggregator overlapping Infron",
+            "behavior": "signup/try CTA in transcribed image",
+            "evidence": "fixture:forward-input.json#candidates/2/supplied_material"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "Supplied image transcription promotes MergeAPI account creation; fixture stipulates business overlap.",
+            "status": "verified",
+            "evidence": "fixture:forward-input.json#candidates/2/supplied_material; verified only within supplied synthetic facts; no real-world replication."
+          }
+        ],
+        "material_update": false
+      }
+    },
+    {
+      "url": "https://x.com/i/web/status/900000000000000104",
+      "author": "@fixtureauthor",
+      "synthetic": true,
+      "lane": "Other",
+      "post_type": "original",
+      "event_key": "agent:reliability:demo",
+      "published_at": "2026-10-26T12:00:00+08:00",
+      "article_urls": [],
+      "edit_ids": [
+        "900000000000000104"
+      ],
+      "supplied_material": "SYNTHETIC: Engineer claims a 4x agent-reliability improvement. The attached video contains the only setup/results and is unavailable. Text alone has no measured protocol. Identity stipulated. No quote or links. Published 2026-10-26 12:00 +08.",
+      "post_id": "900000000000000104",
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "Read the entire supplied synthetic description. Statements are fixture stipulations, not live-source or experimental verification.",
+          "locator": "fixture:forward-input.json#candidates/3/supplied_material"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no quote; no live absence inference."
+        },
+        "media": {
+          "presence": "yes",
+          "status": "unavailable",
+          "note": "Fixture says the only setup/results video is unavailable. No media file, playable representation, or access-attempt record was supplied."
+        },
+        "links": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no links; no live absence inference."
+        }
+      },
+      "completion": {
+        "state": "deferred",
+        "note": "Video setup/results remain unfinished. No network is authorized, and supplied unavailable label alone does not establish an observed hard barrier or two failed access methods.",
+        "checks": {
+          "text": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "read_supplied_fixture",
+                "locator": "fixture:forward-input.json#candidates/3/supplied_material",
+                "outcome": "Read complete supplied synthetic text and declared object scope."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "pending",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "not_present",
+            "attempts": []
+          }
+        }
+      },
+      "review": {
+        "reviewer": "completion-forward synthetic reviewer",
+        "checked_at": "2026-10-26T14:00:00+08:00",
+        "summary_zh": "工程师声称 Agent 可靠性提升4倍，但唯一包含实验设置和结果的视频不可用。",
+        "why_now": "Same-day performance claim could interest developers, but no protocol/results can be established from supplied text.",
+        "brand_reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable.",
+        "fact_reason": "Performance claim remains unknown without setup/results video.",
+        "identity_reason": "Identity/role accepted only as synthetic fixture stipulation; no live account verification performed.",
+        "reason": "Same-day performance claim could interest developers, but no protocol/results can be established from supplied text.",
+        "novelty_reason": "Reliability topic is separate from other batch events; incremental value remains unknown until video evidence is available. Actual history was not supplied.",
+        "decision": "hold",
+        "identity": "verified",
+        "facts": "unknown",
+        "brand": "acceptable",
+        "action": "none",
+        "priority": 5,
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "Agent reliability is relevant but its asserted gain cannot yet inform a decision."
+          },
+          "substance": {
+            "level": "low",
+            "reason": "Text has no measured protocol;4x is unverified without video."
+          },
+          "timeliness": {
+            "level": "high",
+            "reason": "Supplied consistent publication time is2026-10-26 12:00 +08, two hours before fixture evaluation."
+          },
+          "brand_fit": {
+            "level": "high",
+            "reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable."
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "Reliability topic is separate from other batch events; incremental value remains unknown until video evidence is available. Actual history was not supplied."
+          }
+        },
+        "entities": [
+          {
+            "name": "Synthetic engineer",
+            "role": "engineering author",
+            "behavior": "reports agent-reliability gain",
+            "evidence": "fixture:forward-input.json#candidates/3/supplied_material"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "Agent reliability improves4x under the unavailable video setup.",
+            "status": "unknown",
+            "evidence": "fixture:forward-input.json#candidates/3/supplied_material; verified only within supplied synthetic facts; no real-world replication."
+          }
+        ],
+        "material_update": false
+      }
+    },
+    {
+      "url": "https://x.com/i/web/status/900000000000000105",
+      "author": "@fixtureauthor",
+      "synthetic": true,
+      "lane": "Other",
+      "post_type": "original",
+      "event_key": "cache:prefix-isolation:v1",
+      "published_at": "2026-10-26T12:00:00+08:00",
+      "article_urls": [],
+      "edit_ids": [
+        "900000000000000105"
+      ],
+      "supplied_material": "SYNTHETIC: Engineer gives a reproducible prefix-cache experiment: 40 identical-prefix requests, interleaved and isolated server groups, report cache-hit counts and TTFT medians separately. Text explains workload and cold-start limit and includes runnable commands. All supplied; identity stipulated. No media/quote/links/platform CTA. Published 2026-10-26 12:00 +08.",
+      "post_id": "900000000000000105",
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "Read the entire supplied synthetic description. Statements are fixture stipulations, not live-source or experimental verification.",
+          "locator": "fixture:forward-input.json#candidates/4/supplied_material"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no quote; no live absence inference."
+        },
+        "media": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no media; no live absence inference."
+        },
+        "links": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no links; no live absence inference."
+        }
+      },
+      "completion": {
+        "state": "ready",
+        "note": "All available supplied fixture objects reviewed; absence is explicit. No external opening actions performed.",
+        "checks": {
+          "text": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "read_supplied_fixture",
+                "locator": "fixture:forward-input.json#candidates/4/supplied_material",
+                "outcome": "Read complete supplied synthetic text and declared object scope."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "not_present",
+            "attempts": []
+          }
+        }
+      },
+      "review": {
+        "reviewer": "completion-forward synthetic reviewer",
+        "checked_at": "2026-10-26T14:00:00+08:00",
+        "summary_zh": "前缀缓存实验用40个相同前缀请求比较交错与隔离服务组，分别报告命中数和TTFT中位数，并说明冷启动限制。",
+        "why_now": "Same-day reproducible workload and separated cache-hit/TTFT reporting provide a concrete serving-debugging takeaway. No numerical improvement is asserted.",
+        "brand_reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable.",
+        "fact_reason": "Core claims follow only supplied synthetic description; no invented numerical outcome or independent verification.",
+        "identity_reason": "Identity/role accepted only as synthetic fixture stipulation; no live account verification performed.",
+        "reason": "Same-day reproducible workload and separated cache-hit/TTFT reporting provide a concrete serving-debugging takeaway. No numerical improvement is asserted.",
+        "novelty_reason": "Distinct cache-isolation engineering finding, not a restatement of the model-release/evaluation items. Actual history was not supplied.",
+        "decision": "recommend",
+        "identity": "verified",
+        "facts": "verified",
+        "brand": "acceptable",
+        "action": "pure_repost",
+        "priority": 1,
+        "quality": {
+          "audience_value": {
+            "level": "high",
+            "reason": "Serving engineers can compare cache hit counts and latency under a specified workload."
+          },
+          "substance": {
+            "level": "high",
+            "reason": "Fixture specifies40 requests, group layout, separate measures, runnable commands and cold-start limits; experiment not rerun."
+          },
+          "timeliness": {
+            "level": "high",
+            "reason": "Supplied consistent publication time is2026-10-26 12:00 +08, two hours before fixture evaluation."
+          },
+          "brand_fit": {
+            "level": "high",
+            "reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable."
+          },
+          "increment": {
+            "level": "high",
+            "reason": "Distinct cache-isolation engineering finding, not a restatement of the model-release/evaluation items. Actual history was not supplied."
+          }
+        },
+        "entities": [
+          {
+            "name": "Synthetic engineer",
+            "role": "engineering author",
+            "behavior": "describes prefix-cache experiment",
+            "evidence": "fixture:forward-input.json#candidates/4/supplied_material"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "Fixture stipulates40 identical-prefix requests, interleaved/isolated groups, separate cache-hit/TTFT metrics, runnable commands and cold-start limit.",
+            "status": "verified",
+            "evidence": "fixture:forward-input.json#candidates/4/supplied_material; verified only within supplied synthetic facts; no real-world replication."
+          }
+        ],
+        "material_update": false
+      }
+    },
+    {
+      "url": "https://x.com/i/web/status/900000000000000106",
+      "author": "@fixtureauthor",
+      "synthetic": true,
+      "lane": "Model",
+      "post_type": "original",
+      "event_key": "model:cedar:v2",
+      "published_at": null,
+      "article_urls": [],
+      "edit_ids": [
+        "900000000000000106"
+      ],
+      "supplied_material": "SYNTHETIC: Another author repeats the Cedar v2 release with the same weights/evaluation facts as 101 and no independent technical addition. All text supplied, identity stipulated; no media/quote/links. Published 2026-10-26 13:00 +08.",
+      "post_id": "900000000000000106",
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "full",
+          "note": "Read the entire supplied synthetic description. Statements are fixture stipulations, not live-source or experimental verification.",
+          "locator": "fixture:forward-input.json#candidates/5/supplied_material"
+        },
+        "quote": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no quote; no live absence inference."
+        },
+        "media": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no media; no live absence inference."
+        },
+        "links": {
+          "presence": "no",
+          "status": "not_present",
+          "note": "Supplied synthetic description explicitly states no links; no live absence inference."
+        }
+      },
+      "completion": {
+        "state": "ready",
+        "note": "Supplied text fully read, but source-internal date conflicts remain; ready describes object reading only, not verified facts.",
+        "checks": {
+          "text": {
+            "disposition": "resolved",
+            "attempts": [
+              {
+                "method": "read_supplied_fixture",
+                "locator": "fixture:forward-input.json#candidates/5/supplied_material",
+                "outcome": "Read complete supplied synthetic text and declared object scope."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "not_present",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "not_present",
+            "attempts": []
+          }
+        }
+      },
+      "input_publication_metadata": "2026-10-26T12:00:00+08:00",
+      "review": {
+        "reviewer": "completion-forward synthetic reviewer",
+        "checked_at": "2026-10-26T14:00:00+08:00",
+        "summary_zh": "另一条内容重复 Cedar v2 权重及评测发布，未提供独立技术补充；时间和作者描述有冲突。",
+        "why_now": "Narrative says13:00 while structured field says12:00 +08; it also calls the author different from101 despite the same handle.",
+        "brand_reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable.",
+        "fact_reason": "Core technical description accepted solely as fixture stipulation; timestamp conflict unresolved.",
+        "identity_reason": "Structured same handle versus another-author narrative remains unresolved.",
+        "reason": "Narrative says13:00 while structured field says12:00 +08; it also calls the author different from101 despite the same handle.",
+        "novelty_reason": "Same event key and facts as101 with no independent technical addition. This is an intra-batch repetition, not evidence of historical sharing.",
+        "decision": "hold",
+        "identity": "unknown",
+        "facts": "unknown",
+        "brand": "acceptable",
+        "action": "none",
+        "priority": 4,
+        "quality": {
+          "audience_value": {
+            "level": "low",
+            "reason": "Repeats101 with no independent technical addition."
+          },
+          "substance": {
+            "level": "low",
+            "reason": "No independent method or result beyond101."
+          },
+          "timeliness": {
+            "level": "medium",
+            "reason": "Both inconsistent times are same-day, but exact publication remains unresolved."
+          },
+          "brand_fit": {
+            "level": "high",
+            "reason": "Supplied content is model/evaluation/engineering information without a platform signup promotion; model comparisons alone are acceptable."
+          },
+          "increment": {
+            "level": "low",
+            "reason": "Same event key and facts as101 with no independent technical addition. This is an intra-batch repetition, not evidence of historical sharing."
+          }
+        },
+        "entities": [
+          {
+            "name": "Cedar v2",
+            "role": "model",
+            "behavior": "release mention",
+            "evidence": "fixture:forward-input.json#candidates/5/supplied_material"
+          },
+          {
+            "name": "Pine v1",
+            "role": "comparison model",
+            "behavior": "compared with Cedar v2",
+            "evidence": "fixture:forward-input.json#candidates/5/supplied_material"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "Fixture says this repeats101 without independent technical addition.",
+            "status": "verified",
+            "evidence": "fixture:forward-input.json#candidates/5/supplied_material; verified only within supplied synthetic facts; no real-world replication."
+          },
+          {
+            "claim": "Exact publication timestamp is established.",
+            "status": "unknown",
+            "evidence": "Structured published_at=2026-10-26T12:00:00+08:00 conflicts with supplied narrative; no authority rule or correction supplied."
+          },
+          {
+            "claim": "The different-author description is reconciled with the structured same handle.",
+            "status": "unknown",
+            "evidence": "Structured @fixtureauthor equals101 but narrative says another author; fixture identity stipulation does not resolve that conflict."
+          }
+        ],
+        "material_update": false
+      }
+    }
+  ],
+  "review_process_version": 1
+}
