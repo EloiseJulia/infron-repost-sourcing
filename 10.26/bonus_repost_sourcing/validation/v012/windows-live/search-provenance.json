@@ -1,0 +1,115 @@
+{
+  "executed_at": "2026-10-26T13:46:26.013897+00:00",
+  "search_budget": {
+    "queries": 6,
+    "limit": 6,
+    "engine": "system1_search_query",
+    "recency_days": 7
+  },
+  "queries": [
+    {
+      "lane": "Model",
+      "query": "site:x.com/alibaba_qwen/status \"Oct\" \"2026\"",
+      "outcome": "联合结果包含 Qwen Oct9/12/14 旧帖；无48h可用原帖，不能逐条归因给批内单查询。",
+      "engine": "system1_search_query",
+      "recency_days": 7,
+      "executed_on": "2026-10-26",
+      "batch": 1
+    },
+    {
+      "lane": "Model",
+      "query": "site:x.com/deepseek_ai/status \"October\" \"2026\"",
+      "outcome": "四查询联合结果未出现 DeepSeek 具体status；不据此推断该账号无更新。",
+      "engine": "system1_search_query",
+      "recency_days": 7,
+      "executed_on": "2026-10-26",
+      "batch": 1
+    },
+    {
+      "lane": "Other",
+      "query": "site:x.com/vllm_project/status \"Oct\" \"2026\"",
+      "outcome": "联合结果包含 Humming Oct21、多模态 Oct19、社区感谢 Oct21、若干Oct8–16旧帖。",
+      "engine": "system1_search_query",
+      "recency_days": 7,
+      "executed_on": "2026-10-26",
+      "batch": 1
+    },
+    {
+      "lane": "Other",
+      "query": "site:x.com/lmsysorg/status \"October\" \"2026\"",
+      "outcome": "四查询联合结果未出现 lmsysorg 具体status。",
+      "engine": "system1_search_query",
+      "recency_days": 7,
+      "executed_on": "2026-10-26",
+      "batch": 1
+    },
+    {
+      "lane": "Model",
+      "query": "AI model official release October 24 25 26 2026 Qwen DeepSeek Kimi site:x.com",
+      "outcome": "联合结果多为新闻、trending/profile；有个人Kimi评论2113834516670513366，未找到合格官方新原帖。",
+      "engine": "system1_search_query",
+      "recency_days": 7,
+      "executed_on": "2026-10-26",
+      "batch": 2
+    },
+    {
+      "lane": "Other",
+      "query": "inference kernel release October 2026 site:x.com/sgl_project OR site:x.com/flashinfer_ai OR site:x.com/lmsysorg",
+      "outcome": "两查询联合结果未提供新的Other具体status。",
+      "engine": "system1_search_query",
+      "recency_days": 7,
+      "executed_on": "2026-10-26",
+      "batch": 2
+    }
+  ],
+  "source_refs": [
+    "turn26search0–19",
+    "turn27news1–18 / turn27search0–17"
+  ],
+  "scope": "18 distinct concrete status URLs discovered; 2 Other originals fetch-attempted; 0 full original/media/article reviews; no recommendation. Four-query and two-query tool batches returned merged results, not isolated per-query attribution.",
+  "official_release_fallback": [
+    {
+      "url": "https://huggingface.co/deepseek-ai",
+      "observed": "Official org links deepseek_ai; newest listed Flash-1017 updated9days ago; outside7day fallback."
+    },
+    {
+      "url": "https://qwen.ai/blog",
+      "observed": "Fetch yielded0lines; no release event verified."
+    },
+    {
+      "url": "https://qwenlm.github.io/blog/",
+      "observed": "Redirect notice to qwen.ai, visible archive2025; no current event verified."
+    },
+    {
+      "url": "https://huggingface.co/moonshotai",
+      "observed": "Official org links Kimi_Moonshot; listed K3 updatedSep2."
+    },
+    {
+      "url": "https://www.moonshot.ai/",
+      "observed": "Latest Research shown Jul16 KimiK3/PerceptionBench; noOct24–26 event or actual X original resolved."
+    }
+  ],
+  "access": [
+    {
+      "method": "search_service.open",
+      "locator": "https://x.com/vllm_project/status/2112760256120197333",
+      "outcome": "403 Forbidden; ordinary fetch error, not proof of authentication/security block."
+    },
+    {
+      "method": "search_service.open",
+      "locator": "https://x.com/vllm_project/status/2112005673303339084",
+      "outcome": "403 Forbidden."
+    },
+    {
+      "method": "cua.getState",
+      "locator": "browser inventory",
+      "outcome": "apps=[]; browsers=[]"
+    },
+    {
+      "method": "cua.createBrowserTab",
+      "locator": "https://x.com/vllm_project/status/2112760256120197333",
+      "outcome": "Browser is not available: iab; tool environment unavailable, no website/login state observed."
+    }
+  ],
+  "history": "Only dedicated narrow history-snapshot.json consulted. No old runs, tests or recommendation payloads read. No claim of complete Infron history."
+}

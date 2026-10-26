@@ -1,0 +1,250 @@
+{
+  "dedup": [
+    {
+      "key": "article:https://www.lmsys.org/blog/2026-10-21-elastic-ep-scaling-nixl",
+      "post_id": "2113093747261243448",
+      "kind": "recommended",
+      "reference": "20261026T082520Z-f3bd9e6d"
+    },
+    {
+      "key": "article:https://www.sglang.io/blog/omni-interactive-runtime",
+      "post_id": "2112625536350740896",
+      "kind": "recommended",
+      "reference": "20261026T083632Z-d5feb6a1"
+    },
+    {
+      "key": "event:history:2061370992593613227",
+      "post_id": "2061370992593613227",
+      "kind": "history",
+      "reference": "https://x.com/InfronAI/reposts"
+    },
+    {
+      "key": "event:history:2071973015789666664",
+      "post_id": "2071973015789666664",
+      "kind": "history",
+      "reference": "https://x.com/InfronAI/reposts"
+    },
+    {
+      "key": "event:history:2075775678633648503",
+      "post_id": "2075775678633648503",
+      "kind": "history",
+      "reference": "https://x.com/InfronAI/reposts"
+    },
+    {
+      "key": "event:history:2113247619220934671",
+      "post_id": "2112218661432000694",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2113247619220934671"
+    },
+    {
+      "key": "event:history:2113247619220934671",
+      "post_id": "2113247619220934671",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2113247619220934671"
+    },
+    {
+      "key": "event:history:2114138057138130997",
+      "post_id": "2114138057138130997",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114138057138130997"
+    },
+    {
+      "key": "event:history:2114167671524892871",
+      "post_id": "2114167671524892871",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114167671524892871"
+    },
+    {
+      "key": "event:history:2114178474382655883",
+      "post_id": "2114178474382655883",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114178474382655883"
+    },
+    {
+      "key": "event:history:2114492378027352571",
+      "post_id": "2114492378027352571",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114492378027352571"
+    },
+    {
+      "key": "event:history:2114551241296822294",
+      "post_id": "2114551241296822294",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114551241296822294"
+    },
+    {
+      "key": "event:infron:alibaba-collaboration:2026-07-30",
+      "post_id": "2082647369888518577",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2082670209777942882"
+    },
+    {
+      "key": "event:infron:alibaba-collaboration:2026-07-30",
+      "post_id": "2082670209777942882",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2082670209777942882"
+    },
+    {
+      "key": "event:infron:esp32-open-source:2026-10-26",
+      "post_id": "2114551241296822294",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114551241296822294"
+    },
+    {
+      "key": "event:infron:free-lineup:2026-10-19",
+      "post_id": "2112185876054733177",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2112185876054733177"
+    },
+    {
+      "key": "event:infron:free-lineup:2026-10-19",
+      "post_id": "2113628999393874373",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2113628999393874373"
+    },
+    {
+      "key": "event:infron:glm53-selected-route-discount:2026-10-26",
+      "post_id": "2114492378027352571",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114492378027352571"
+    },
+    {
+      "key": "event:infron:qwen38-flash-usage:2026-10-25",
+      "post_id": "2114178474382655883",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114178474382655883"
+    },
+    {
+      "key": "event:openai:arena-frontier:2026-10-21",
+      "post_id": "2112600237491810662",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114564382751694946"
+    },
+    {
+      "key": "event:openai:arena-frontier:2026-10-21",
+      "post_id": "2114564382751694946",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114564382751694946"
+    },
+    {
+      "key": "event:sglang:elastic-ep:nixl:2026-10-21",
+      "post_id": "2113093747261243448",
+      "kind": "recommended",
+      "reference": "20261026T082520Z-f3bd9e6d"
+    },
+    {
+      "key": "event:sglang:omni:interactive-runtime:2026-10-20",
+      "post_id": "2112625536350740896",
+      "kind": "recommended",
+      "reference": "20261026T083632Z-d5feb6a1"
+    },
+    {
+      "key": "post:2061370992593613227",
+      "post_id": "2061370992593613227",
+      "kind": "history",
+      "reference": "https://x.com/InfronAI/reposts"
+    },
+    {
+      "key": "post:2071973015789666664",
+      "post_id": "2071973015789666664",
+      "kind": "history",
+      "reference": "https://x.com/InfronAI/reposts"
+    },
+    {
+      "key": "post:2075775678633648503",
+      "post_id": "2075775678633648503",
+      "kind": "history",
+      "reference": "https://x.com/InfronAI/reposts"
+    },
+    {
+      "key": "post:2082647369888518577",
+      "post_id": "2082647369888518577",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2082670209777942882"
+    },
+    {
+      "key": "post:2082670209777942882",
+      "post_id": "2082670209777942882",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2082670209777942882"
+    },
+    {
+      "key": "post:2112185876054733177",
+      "post_id": "2112185876054733177",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2112185876054733177"
+    },
+    {
+      "key": "post:2112218661432000694",
+      "post_id": "2112218661432000694",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2113247619220934671"
+    },
+    {
+      "key": "post:2112600237491810662",
+      "post_id": "2112600237491810662",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114564382751694946"
+    },
+    {
+      "key": "post:2112625536350740896",
+      "post_id": "2112625536350740896",
+      "kind": "recommended",
+      "reference": "20261026T083632Z-d5feb6a1"
+    },
+    {
+      "key": "post:2113093747261243448",
+      "post_id": "2113093747261243448",
+      "kind": "recommended",
+      "reference": "20261026T082520Z-f3bd9e6d"
+    },
+    {
+      "key": "post:2113247619220934671",
+      "post_id": "2113247619220934671",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2113247619220934671"
+    },
+    {
+      "key": "post:2113628999393874373",
+      "post_id": "2113628999393874373",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2113628999393874373"
+    },
+    {
+      "key": "post:2114138057138130997",
+      "post_id": "2114138057138130997",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114138057138130997"
+    },
+    {
+      "key": "post:2114167671524892871",
+      "post_id": "2114167671524892871",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114167671524892871"
+    },
+    {
+      "key": "post:2114178474382655883",
+      "post_id": "2114178474382655883",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114178474382655883"
+    },
+    {
+      "key": "post:2114492378027352571",
+      "post_id": "2114492378027352571",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114492378027352571"
+    },
+    {
+      "key": "post:2114551241296822294",
+      "post_id": "2114551241296822294",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114551241296822294"
+    },
+    {
+      "key": "post:2114564382751694946",
+      "post_id": "2114564382751694946",
+      "kind": "history",
+      "reference": "https://x.com/i/web/status/2114564382751694946"
+    }
+  ]
+}

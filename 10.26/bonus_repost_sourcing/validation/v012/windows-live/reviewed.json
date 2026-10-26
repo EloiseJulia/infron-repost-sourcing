@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "review_process_version": 1,
+  "mode": "manual",
+  "coverage": {
+    "discovery": "not_implemented",
+    "status": "partial",
+    "window": "2026-10-26 agent-led bounded sourcing: Model48h then7d fallback; Other7d; 6 actual queries; 18 concrete status URLs triaged; 2 original-fetch attempts; 0 completed deep reviews.",
+    "success": [
+      "完成Model3次、Other3次实际查询，均使用system1及7日recency；联合返回结果无逐query归因。",
+      "保存exact queries、18条triage、plan、专用窄history snapshot及scope；未读取旧run或测试产物。",
+      "查阅DeepSeek/Moonshot官方HF组织和官方网站、Qwen新旧blog入口、vLLM官方repo的身份链接。"
+    ],
+    "failed": [
+      "Model未找到可核验的48h新原帖；官方发布页回查亦未定位合格的新X原帖；并不等于X今天无好帖。",
+      "两条Other原帖search fetch403；cua inventory无browser，Humming浏览器创建失败Browser is not available:iab。",
+      "原帖全文、引用、源帖媒体与完整外链均有必要工作未完成；两项均deferred，0推荐，日常选帖目标未达成。"
+    ]
+  },
+  "candidates": [
+    {
+      "url": "https://x.com/vllm_project/status/2112760256120197333",
+      "author": "@vllm_project",
+      "synthetic": false,
+      "lane": "Other",
+      "post_type": "unknown",
+      "published_at": null,
+      "event_key": "vllm:humming:quantized-kernels:2026-10-21",
+      "article_urls": [],
+      "edit_ids": [],
+      "completion": {
+        "state": "deferred",
+        "note": "有界日常调用已结束；原帖全文未取得，尚未尝试的quote/media/links保留pending，不标记已完整审核或网站硬阻断。",
+        "checks": {
+          "text": {
+            "disposition": "pending",
+            "attempts": [
+              {
+                "method": "search_service.open",
+                "locator": "https://x.com/vllm_project/status/2112760256120197333",
+                "outcome": "403 Forbidden; only a fetch error, no website login/security diagnosis."
+              },
+              {
+                "method": "cua.createBrowserTab",
+                "locator": "https://x.com/vllm_project/status/2112760256120197333",
+                "outcome": "Browser is not available: iab; no page read. The environment has no enabled browser."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "pending",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "pending",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "pending",
+            "attempts": []
+          }
+        }
+      },
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "partial",
+          "note": "仅搜索摘要；未读到实际原帖全文，发布时间仅摘要显示2026-10-21，没有独立核验。",
+          "locator": "https://x.com/vllm_project/status/2112760256120197333"
+        },
+        "quote": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "必要对象尚未检查：原帖无法读取，不能确认有无引用、源帖媒体或完整外链；保留待核验。"
+        },
+        "media": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "必要对象尚未检查：原帖无法读取，不能确认有无引用、源帖媒体或完整外链；保留待核验。"
+        },
+        "links": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "必要对象尚未检查：原帖无法读取，不能确认有无引用、源帖媒体或完整外链；保留待核验。"
+        }
+      },
+      "review": {
+        "reviewer": "Codex agent",
+        "checked_at": "2026-10-26T13:47:15.438213+00:00",
+        "summary_zh": "Humming量化推理kernel：仅为待核验线索，本轮不能推荐。",
+        "why_now": "搜索摘要显示2026-10-21；需核原帖日期及当前价值，未凭摘要认定时效合格。",
+        "brand_reason": "开源推理技术可能契合Infron读者，但原帖CTA、素材、被引用实体未读，品牌适配未知。",
+        "fact_reason": "核心技术主张、工作负载和性能图表未核验；没有实验复现或独立性能确认。",
+        "identity_reason": "GitHub主仓库README的Twitter/X链接解析为https://x.com/vllm_project，确认句柄与项目关联。",
+        "reason": "保留待完成调查：X fetch返回403，浏览器工具环境不可用；未核验原帖、素材、必要续帖及外链，不能推荐。",
+        "novelty_reason": "在专用窄历史快照中未发现此post/event；历史非完整，不能称从未分享。",
+        "decision": "hold",
+        "identity": "verified",
+        "facts": "unknown",
+        "brand": "unknown",
+        "action": "none",
+        "priority": 1,
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "推理kernel或自建多模态部署对基础设施开发者有潜在价值，原帖未读。"
+          },
+          "substance": {
+            "level": "low",
+            "reason": "只取得搜索摘要，缺方法、条件与核心证据。"
+          },
+          "timeliness": {
+            "level": "low",
+            "reason": "摘要显示Oct21，原帖时间仍未独立核验。"
+          },
+          "brand_fit": {
+            "level": "low",
+            "reason": "未检查源帖媒体及CTA，不能完成品牌适配判断。"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "窄历史快照无此post/event，仍需原帖实质审查。"
+          }
+        },
+        "entities": [
+          {
+            "name": "vLLM",
+            "role": "open-source inference framework",
+            "behavior": "技术线索发布者；原帖推广行为未核验",
+            "evidence": "https://github.com/vllm-project/vllm → Twitter/X → https://x.com/vllm_project"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "Humming为量化推理提供快速、灵活的kernel；具体性能条件与提升尚未核验",
+            "status": "unknown",
+            "evidence": "https://x.com/vllm_project/status/2112760256120197333；只有检索摘要，原帖与主张证据未读。"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://x.com/vllm_project/status/2112005673303339084",
+      "author": "@vllm_project",
+      "synthetic": false,
+      "lane": "Other",
+      "post_type": "unknown",
+      "published_at": null,
+      "event_key": "vllm:multimodal-local-deployment:2026-10-19",
+      "article_urls": [],
+      "edit_ids": [],
+      "completion": {
+        "state": "deferred",
+        "note": "有界日常调用已结束；原帖全文未取得，尚未尝试的quote/media/links保留pending，不标记已完整审核或网站硬阻断。",
+        "checks": {
+          "text": {
+            "disposition": "pending",
+            "attempts": [
+              {
+                "method": "search_service.open",
+                "locator": "https://x.com/vllm_project/status/2112005673303339084",
+                "outcome": "403 Forbidden; only a fetch error, no website login/security diagnosis."
+              }
+            ]
+          },
+          "quote": {
+            "disposition": "pending",
+            "attempts": []
+          },
+          "media": {
+            "disposition": "pending",
+            "attempts": []
+          },
+          "links": {
+            "disposition": "pending",
+            "attempts": []
+          }
+        }
+      },
+      "evidence": {
+        "text": {
+          "presence": "yes",
+          "status": "partial",
+          "note": "仅搜索摘要；未读到实际原帖全文，发布时间仅摘要显示2026-10-19，没有独立核验。",
+          "locator": "https://x.com/vllm_project/status/2112005673303339084"
+        },
+        "quote": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "必要对象尚未检查：原帖无法读取，不能确认有无引用、源帖媒体或完整外链；保留待核验。"
+        },
+        "media": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "必要对象尚未检查：原帖无法读取，不能确认有无引用、源帖媒体或完整外链；保留待核验。"
+        },
+        "links": {
+          "presence": "unknown",
+          "status": "unavailable",
+          "note": "必要对象尚未检查：原帖无法读取，不能确认有无引用、源帖媒体或完整外链；保留待核验。"
+        }
+      },
+      "review": {
+        "reviewer": "Codex agent",
+        "checked_at": "2026-10-26T13:47:15.438213+00:00",
+        "summary_zh": "vLLM多模态自建部署线索：仅为待核验线索，本轮不能推荐。",
+        "why_now": "搜索摘要显示2026-10-19；需核原帖日期及当前价值，未凭摘要认定时效合格。",
+        "brand_reason": "开源推理技术可能契合Infron读者，但原帖CTA、素材、被引用实体未读，品牌适配未知。",
+        "fact_reason": "核心技术主张、工作负载和性能图表未核验；没有实验复现或独立性能确认。",
+        "identity_reason": "GitHub主仓库README的Twitter/X链接解析为https://x.com/vllm_project，确认句柄与项目关联。",
+        "reason": "保留待完成调查：X fetch返回403，浏览器工具环境不可用；未核验原帖、素材、必要续帖及外链，不能推荐。",
+        "novelty_reason": "在专用窄历史快照中未发现此post/event；历史非完整，不能称从未分享。",
+        "decision": "hold",
+        "identity": "verified",
+        "facts": "unknown",
+        "brand": "unknown",
+        "action": "none",
+        "priority": 2,
+        "quality": {
+          "audience_value": {
+            "level": "medium",
+            "reason": "推理kernel或自建多模态部署对基础设施开发者有潜在价值，原帖未读。"
+          },
+          "substance": {
+            "level": "low",
+            "reason": "只取得搜索摘要，缺方法、条件与核心证据。"
+          },
+          "timeliness": {
+            "level": "low",
+            "reason": "原帖准确发布时间未核验；Oct19线索还接近或超过7日边界。"
+          },
+          "brand_fit": {
+            "level": "low",
+            "reason": "未检查源帖媒体及CTA，不能完成品牌适配判断。"
+          },
+          "increment": {
+            "level": "medium",
+            "reason": "窄历史快照无此post/event，仍需原帖实质审查。"
+          }
+        },
+        "entities": [
+          {
+            "name": "vLLM",
+            "role": "open-source inference framework",
+            "behavior": "技术线索发布者；原帖推广行为未核验",
+            "evidence": "https://github.com/vllm-project/vllm → Twitter/X → https://x.com/vllm_project"
+          }
+        ],
+        "claims": [
+          {
+            "claim": "在自己的基础设施运行多模态决策；具体版本、接口、依赖和适用条件未核验",
+            "status": "unknown",
+            "evidence": "https://x.com/vllm_project/status/2112005673303339084；只有检索摘要，原帖与主张证据未读。"
+          }
+        ]
+      }
+    }
+  ]
+}
