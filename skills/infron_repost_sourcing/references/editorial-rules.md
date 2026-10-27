@@ -1,6 +1,6 @@
 # Editorial rules · 0.1.0 · 2026-10-26
 
-v0.1.3 mode note: the principles below guide relevance/brand judgment. The mandatory complete-X-media gates and terminal Hold/reject workflow are for explicit publication-readiness audit. Default curation follows SKILL.md: recommend a separately inspected primary article when the X post is inaccessible; do not imply that the inaccessible post itself was cleared. Timeliness is a reasoned editorial preference in curation, not the legacy 48h hard gate.
+v0.1.4 scope: default sourcing returns only actual X or LinkedIn post permalinks, via topic-led or opportunity-led discovery. Websites supply background evidence, never substitute recommendations. Follow SKILL.md for bounded replacement and chat delivery. The terminal Hold/reject workflow below applies to explicit publication clearance; missing central evidence excludes a default candidate, so seek another social post.
 
 ## Grounding and precedence
 
