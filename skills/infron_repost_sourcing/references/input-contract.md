@@ -1,6 +1,6 @@
 # Manual input contract · schema 1.0
 
-The runner executes no network/model calls. An agent/editor supplies semantic reviews based on actually read material. `prepare` only normalizes; `run` enforces declarations and state gates. See `assets/manual-template.json` and the real reviewed input under `10.26/bonus_repost_sourcing/samples/`.
+The runner executes no network/model calls. An agent/editor supplies semantic reviews based on actually read material. `prepare` only normalizes; `run` enforces declarations and state gates. See `assets/manual-template.json`; it is a synthetic template, not reviewed evidence.
 
 ## Bundle
 
@@ -55,4 +55,3 @@ Only selected recommendations/observed history/explicit posted feedback suppress
 `discovery_blocked`: automated sourcing unavailable even when manual records reviewed. `partial_coverage`: missing scope recorded. `manual_no_qualified_candidates`: supplied batch covered, zero qualifying recommendations. None means "no good posts on X today".
 
 Use sequential runs per state/output directory. SQLite transactions serialize state writes. Invalid input exits 2 before state mutation. If export fails after directory creation, state rolls back but a partial directory may remain; never report it as successful. Use a fresh directory after fixing I/O.
-

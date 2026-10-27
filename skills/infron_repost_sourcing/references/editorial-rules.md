@@ -4,9 +4,9 @@ v0.1.4 scope: default sourcing returns only actual X or LinkedIn post permalinks
 
 ## Grounding and precedence
 
-User instructions → current explicit brief/mentor feedback → current project brand context → these provisional rules → observed history. Preserve provenance; do not turn inferred motives into mentor decisions.
+User instructions → current explicit brief and feedback → current project brand context → these provisional rules → observed history. Preserve provenance; do not turn inferred motives into editorial decisions.
 
-Confirmed feedback is the user's 2026-10-25 account in the brand context: official sources are preferred, but assess the promoted product; prefer another post when the original or core media promotes a business-overlapping product. Other models are generally mentionable. Authoritative rankings can be considered in context. Do not create a company blacklist from an uncertain transcribed product name.
+Official sources are preferred, but assess the promoted product; prefer another post when the original or core media promotes a business-overlapping product. Other models are generally mentionable. Authoritative rankings can be considered in context. Do not create a company blacklist from an uncertain product name.
 
 Historical sharing is positive action evidence only. A quote of an Alibaba Cloud/Infron collaboration is a specific partnership context, not a waiver for all cloud promotions. A quoted Arena ranking supports considering evaluator content; it does not pre-approve every ranking. No historical non-selection is a negative label.
 
@@ -32,4 +32,3 @@ Historical sharing is positive action evidence only. A quote of an Alibaba Cloud
 | Same release with better headline | Hold as event duplicate | Rewording is not material progress |
 
 Use natural, precise Chinese summaries and technical English source names. Show what the reader learns, why now, source, gaps and incremental value. Do not add sales claims unless explicitly requested and freshly verified.
-

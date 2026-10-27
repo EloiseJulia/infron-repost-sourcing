@@ -8,7 +8,7 @@ $targetRoot = [System.IO.Path]::GetFullPath($ProjectRoot)
 if (-not (Test-Path -LiteralPath $targetRoot -PathType Container)) {
     throw 'ProjectRoot must be an existing directory.'
 }
-$scopes = @('skills\infron_repost_sourcing', '10.26\bonus_repost_sourcing')
+$scopes = @('skills\infron_repost_sourcing')
 $copyPlan = @()
 foreach ($scope in $scopes) {
     $scopeRoot = Join-Path $sourceRoot $scope
@@ -32,6 +32,16 @@ foreach ($scope in $scopes) {
         }
     }
 }
+# Keep an existing project-specific brand context, which may be newer.
+$brandRelative = 'workflows\infron-content\02_Brand_Context.md'
+$brandTarget = Join-Path $targetRoot $brandRelative
+if (Test-Path -LiteralPath $brandTarget) {
+    if (-not (Test-Path -LiteralPath $brandTarget -PathType Leaf)) {
+        throw "Path conflict: $brandTarget"
+    }
+} else {
+    $copyPlan += [PSCustomObject]@{Source=(Join-Path $sourceRoot $brandRelative); Target=$brandTarget}
+}
 # All conflicts are checked before any copy; never overwrite existing bytes.
 foreach ($item in $copyPlan) {
     if ($PSCmdlet.ShouldProcess($item.Target, 'Copy new task file')) {
@@ -40,4 +50,4 @@ foreach ($item in $copyPlan) {
         [System.IO.File]::Copy($item.Source, $item.Target, $false)
     }
 }
-Write-Output "New task files planned: $($copyPlan.Count). Existing files preserved. No push, publishing, scheduling or global installation."
+Write-Output "New task files planned: $($copyPlan.Count). Existing files and brand context preserved. No push, publishing, scheduling or global installation."

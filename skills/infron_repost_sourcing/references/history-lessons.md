@@ -13,7 +13,6 @@ Official GitHub links https://x.com/InfronAI. Observed direct evidence:
 
 The browser initially hit a login gate, then the same session became readable and allowed direct Reposts-tab verification. Current history access is partially available; API discovery remains unavailable. Do not repeat the initial gate as the final state.
 
-Full per-object reading scope, links, inferences and limitations appear in `10.26/bonus_repost_sourcing/04_History_Analysis.md` and `04_History_Cases.json`. Seeds store observed sharing, not mentor approval. No verified reply sample was established; two conversation continuations lack explicit in_reply_to verification.
+Detailed historical records and state are not distributed with this repository. Historical seeds represent observed sharing, not approval. No verified reply sample was established; two conversation continuations lack explicit in_reply_to verification.
 
-Latest explicit mentor feedback in the brand context outranks these historical tendencies. Unread charts/video or unknown product roles remain Hold. No historical non-selection was treated as rejection.
-
+Current explicit brief and brand guidance outrank these historical tendencies. Unread charts/video or unknown product roles remain Hold. No historical non-selection was treated as rejection.
