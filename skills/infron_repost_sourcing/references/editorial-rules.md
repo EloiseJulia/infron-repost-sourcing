@@ -1,6 +1,6 @@
 # Editorial rules · 0.1.0 · 2026-10-26
 
-v0.1.4 scope: default sourcing returns only actual X or LinkedIn post permalinks, via topic-led or opportunity-led discovery. Websites supply background evidence, never substitute recommendations. Follow SKILL.md for bounded replacement and chat delivery. The terminal Hold/reject workflow below applies to explicit publication clearance; missing central evidence excludes a default candidate, so seek another social post.
+Default sourcing follows SKILL.md: actually read social posts and primary technical sources can be recommended, with distinct source labels. Only a read social permalink is a repost target. Respect narrower user requests. The terminal Hold/reject workflow below applies to explicit publication clearance; missing central evidence excludes a default candidate.
 
 ## Grounding and precedence
 
@@ -14,7 +14,7 @@ Historical sharing is positive action evidence only. A quote of an Alibaba Cloud
 
 1. Identify author, concrete version/event and factual claim. Hold uncertainty, reject demonstrable falsehood.
 2. Read original text and necessary quote/thread, relevant media and claim/brand-bearing links. Hold material gaps. An API attachment object is not an inspected image or watched video.
-3. Review entities as `name × role × behavior × evidence`. A model mention/comparison, an independent evaluator result, a developer-tool tutorial and a competing platform signup CTA are different behaviors. Default-reject overlap promotion; hold ambiguous roles. An explicit comparison brief may change scope, but record a rule revision before using this runner.
+3. Review entities as `name × role × behavior × evidence`. A model mention/comparison, an independent evaluator result, a developer-tool tutorial and a competing platform signup CTA are different behaviors. Prefer a different source for overlap promotion. For ambiguous roles in default discovery, judge the actual content and task context, and disclose material uncertainty; in publication clearance hold an unresolved role. An explicit comparison brief may change scope, but record a rule revision before using the legacy runner.
 4. Assess five dimensions separately: audience value, technical substance/evidence, reason to share now, brand fit, incremental value over actual past sharing. Each high/medium/low needs a concrete reason. High quality cannot offset missing evidence.
 5. Recommend only useful, timely and well-supported posts. Hold temporarily resolvable gaps. Reject irrelevant, empty hype, unsupported grand claims or unsuitable promotions. Record exactly why. No likes threshold and no author auto-pass.
 
@@ -27,7 +27,7 @@ Historical sharing is positive action evidence only. A quote of an Alibaba Cloud
 | Official model post promoting an inference aggregator | Default Reject | Actual signup/try CTA, including image |
 | Kernel/cache/Agent reliability experiment | Consider Other | Reproducibility, workload and developer takeaway |
 | Supplier/partner co-marketing | Hold pending current relationship evidence | Historical sharing alone is insufficient |
-| Blog without an actual X original | Off-platform lead | Never invent a repostable status URL |
+| Primary technical article without a social original | Content idea or reading recommendation | Read core content; label it as an article, never invent a repostable status URL |
 | Good text with unread chart/video/quote | Hold | Name missing object and retrieval route |
 | Same release with better headline | Hold as event duplicate | Rewording is not material progress |
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "Infron Repost Sourcing"
-  short_description: "Find relevant X and LinkedIn posts for Infron to repost"
-  default_prompt: "Use $infron-repost-sourcing to find X or LinkedIn posts on my topic or relevant trending opportunities for Infron, with direct post links and concise repost angles."
+  short_description: "Find and assess AI infrastructure content for Infron"
+  default_prompt: "Use $infron-repost-sourcing to discover and read relevant social posts or primary technical content for Infron. Label source types and give concise, platform-aware sharing angles."
