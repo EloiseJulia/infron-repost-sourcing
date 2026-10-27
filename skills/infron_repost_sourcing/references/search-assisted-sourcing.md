@@ -6,7 +6,7 @@ Use the host's available web-search tools when the user asks to find repost cand
 
 v0.1.2 scheduling: reserve at least two actual queries per lane, up to two adaptive queries. Prefer the strongest fresh-information engine and provider recency filters. Start with source-anchored queries using the actual month/year, e.g. `site:x.com/vllm_project/status "Oct" "2026"`, `site:x.com/lmsysorg/status "Oct" "2026"`, and model-maker accounts from the source pool. Web engines need not support X-native since/until syntax. Do not spend all six queries on a weak engine or overconstrained format. Search Model releases/evaluations separately from inference-engine news. If no 48h Model candidates, follow official release-page events to actual X originals; seven-day discovery fallback does not waive timeliness or justify invented evergreen reasons.
 
-Save observed triage before deep reading, then run sourcing_plan.py (format in SKILL.md). Alternate viable lanes and try a replacement when the first candidate exceeds its first-pass budget. Use the dedicated history snapshot instead of dumping prior run/decision payloads. This is agent-led discovery; CLI automatic_discovery remains false.
+For the legacy X-only audit, save observed triage before deep reading and use `sourcing_plan.py` if its Model/Other queue is appropriate. Its required inputs are defined in the script and its synthetic tests. Alternate viable lanes and try a replacement when the first candidate exceeds its first-pass budget. Use the dedicated history snapshot instead of dumping prior run/decision payloads. This is agent-led discovery; CLI automatic_discovery remains false.
 
 1. Read the source pool, current brand context, local historical seeds and state. Use source links as leads, never an author whitelist.
 2. Start with a seven-day Other window and 48-hour Model window. Search date-sensitive queries through the host's search tools, prioritizing official accounts and precise events. Example queries: `site:x.com/vllm_project/status inference`, `site:x.com/lmsysorg/status serving`, and official model-account release searches. Include current date/month in queries and available recency filters, but verify publication time independently.
@@ -28,4 +28,4 @@ Official references checked 2026-10-26:
 - https://docs.x.com/x-api/posts/search/quickstart/recent-search
 - https://docs.x.com/x-api/getting-started/pricing
 
-The public-search workflow was used for six real posts on 2026-10-26; see project `08_Real_Search_Trial.md`. Standalone/API discovery remains unimplemented and untested.
+The public-search workflow was used for six real posts on 2026-10-26; the historical trial records are not distributed in this repository. Standalone/API discovery remains unimplemented and untested.

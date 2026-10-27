@@ -1,53 +1,52 @@
 ---
 name: infron-repost-sourcing
-description: Find worthwhile AI model and inference-engineering posts or primary-source articles for Infron and return useful links with concise editorial reasons. Use when asked to find content to read, share, or consider for reposting, without requiring user links. Default to content curation, not publication clearance. Only use the strict audit pipeline when the user explicitly requests publication-readiness verification.
+description: Find X and LinkedIn original posts suitable for Infron to repost or quote, either for a specified model/feature/topic or through relevant trending conversations. Search proactively without user links and return social-post permalinks with concrete business relevance and editorial reasons. Never substitute websites or articles for repost targets.
 ---
 
-# Infron Repost Sourcing v0.1.3
+# Infron Repost Sourcing v0.1.4
 
-## Default task: find useful content and deliver links
+## Goal and context
 
-The user's goal is to say one prompt and receive worthwhile posts or URLs. Default to **curation**: proactively search, read and compare, then deliver normally 2–3 concrete recommendations in chat. No user-supplied links, JSON form, command invocation or report download is needed.
+Proactively search and return normally 2–3 worthwhile X or LinkedIn original posts directly in Chinese chat. Require no links, forms, Python commands or report download from the user. Read current project `workflows/infron-content/02_Brand_Context.md` and [editorial rules](references/editorial-rules.md). Use [source pool](references/source-pool.json) as leads, not a whitelist. These instructions override legacy audit/search defaults.
 
-Read current `workflows/infron-content/02_Brand_Context.md` and the editorial principles in [editorial rules](references/editorial-rules.md). Use [source pool](references/source-pool.json) as starting leads, not an account whitelist. Apply the curation rules below instead of the legacy audit workflow's 48h gates, fixed category slots, mandatory completion schema or report exports.
+## Select the entry route
 
-### Select for the reader
+**Topic-led (指定主题):** If the user names a model, capability, feature or campaign, keep that topic as the constraint. Search exact names/versions, aliases, official authors and credible technical commentary on both platforms. Seek announcements, useful demos, evaluations and implementation experience. For old events, seek meaningful recent developments; never silently substitute unrelated trends.
 
-Recommend items with a specific developer takeaway: model capability/choice, inference performance and cost mechanisms, reliability, tool use, deployment or a reproducible engineering lesson. Prefer primary sources and substantial explanation over hype. Check actual target content for brand fit: a model mention or open-source implementation is different from promoting a business-overlapping API platform. Do not invent Infron capabilities, prices or partnerships. No likes threshold or invented quality score.
+**Opportunity-led (热点机会):** If no topic is given, discover conversations Infron can credibly join: model releases/capabilities, independent evaluations, inference cost/latency/reliability, routing, caching, deployment and developer workloads. Explain the actual business connection and a natural contribution: model-choice lesson, workload implication or engineering tradeoff. AI popularity alone is insufficient.
 
-Prefer recent content, initially the last 14 days. Recency is a preference, not an automatic veto for useful engineering material. Label publication dates accurately; older timeless material needs a specific current-use reason and must not be presented as breaking news. Try to cover models and engineering, but do not force one item in each slot if better items are in one category.
+Use both routes if requested, label each result's route, and do not ask the user to choose for ordinary requests. Never invent Infron support, discounts, features or partnerships; specific product claims require current explicit evidence.
 
-### Search, read, replace
+## Search, read and replace
 
-1. Start with both model and engineering sources. Use the strongest available current search engine, source-specific month/year searches and official blog/release indexes. Normally use 4–6 query strategies, up to 8 only when replacement is needed; consolidate searches rather than browsing indefinitely.
-2. Skim a shortlist, compare value and remove known duplicates before deep reading. Consult existing history through `sourcing_plan.py history` if useful; do not read old decision payloads as evidence for new recommendations.
-3. Open each selected target and read the substantive text and decision-critical claims/limitations. Search snippets, inaccessible URLs or titles alone are not a recommendation. Normally finish the strongest 2–3, with at most two extra evidence-opening attempts on a blocked target before switching.
-4. **If X cannot be read, change the delivery target**: follow an observed original-author blog/repo/paper link, verify that page, and recommend that actual URL as an article/repo/paper. Do not invent an X status, say unseen media was checked, or claim the original X post is cleared. If no readable primary alternative exists, replace the item with another event/source.
-5. For an article recommendation, confirm its core message and why it is useful; use method/text/table evidence and relevant limits. Do not audit every supplementary hardware chart, code dependency or demo by default. Quote numerical performance only when the reported setting and supporting material were actually checked; otherwise discuss the supported engineering concept, not an unverified number. Do not narrow away misleading central claims or material promotion to pass the content.
-6. Inspect media when it is needed to understand the actual recommended target's central claim or brand behavior. Unread X media prevents certifying that X post for reposting, but does not automatically block a separately read, independently suitable article. Record target/scope honestly internally.
-7. Allocate effort across alternatives. Don't deliver a list of Hold/deferred tasks as the normal curation answer while readable worthwhile sources remain. Switch domains and then consider clearly labelled evergreen material rather than stopping at one blocked site. If all genuinely available sources remain unreadable or irrelevant, state the concrete limitation briefly; do not fabricate recommendations to guarantee a nonempty answer.
+1. Begin within 7 days, prioritizing the last 48–72 hours for fast-moving news. Expand to 14 days if needed. Older posts need a current trigger and accurate date. Respect explicit date constraints.
+2. Use 4–6 distinct query strategies, up to 8 for replacements. Include X/twitter status and LinkedIn posts/feed-update searches, exact topics, authors and current event/date terms. Neither platform has a mandatory quota.
+3. For hotspots, seek observable signals: dated engagement visible on the post, multiple independent credible authors discussing the event, or a substantive current release driving discussion. Distinguish attention from mere recency. Never invent likes, growth or virality. Without attention evidence, call it a relevant recent post rather than a proven trend.
+4. Compare developer value, technical substance, timeliness, brand fit and information increment. Prefer official authors, maintainers, researchers and credible evaluators. Avoid empty hype, unsupported central claims and promotion of business-overlapping platforms. A model name or neutral ranking is not automatically competitor promotion.
+5. Remove duplicate URLs/events; consult available actual posted history, using the read-only history helper if useful. Missing history means no claim of official-account deduplication. Normally choose one strongest post per event unless a second adds a materially different contribution.
+6. Open each selected social permalink and read substantive text, relevant thread/quote, and media necessary to understand central claims or promotion. Follow primary links for factual checks as needed. Search snippets alone are leads, not sufficient reading evidence. Numerical performance requires checked conditions and support.
+7. On blocked/incomplete social targets, make at most two reasonable alternative retrieval attempts with authorized tools, then replace the post/author/platform. Websites may verify background or expose an observed social permalink, but must never replace the final repost target. Never guess status/activity IDs or bypass safeguards.
+8. Exclude candidates with unread central claims or brand-bearing media. Avoid relying on a minor unseen nonessential element; mention it only when it changes editorial use. Do not narrow away an unsupported central claim to make a post pass. Continue replacing weak/blocked candidates while the search budget remains.
 
-### User-facing output
+## Deliver in chat
 
-Lead directly with the recommendations, not access failures, counts, tests or rules. For each item:
-- Human-readable title linked to the **actual inspected target**.
-- Source/date and type (X post, engineering article, model card, paper or repo).
-- Two concise Chinese sentences: what the reader learns and why it is worth sharing/reading for Infron.
-- One concrete angle the team could use, when useful.
+Lead with recommendations. For each item give:
+- Title linked to the actual X status or LinkedIn post/feed-update permalink; author, platform and date.
+- Route (“指定主题” or “热点机会”), with the topic or observed attention signal.
+- Content takeaway and a specific reason Infron should participate.
+- Suggested repost or quote/comment action and a short editorial angle. Write full promotional copy only when requested.
 
-Keep source facts separate from editorial inference. A recommendation is an editorial lead, not a claim of publication authorization or completed empirical replication. Mention a narrow limitation only when it changes how this particular item should be used; do not add boilerplate to every item.
+Only social posts belong in recommendation slots. Blogs, product pages, repos, papers, model cards, account profiles and search pages are not repost targets. A LinkedIn share of an external article qualifies only when the actual LinkedIn post is read and its permalink is recommended. External sources may appear as subordinate evidence.
 
-Normally no standalone report or developer checklist. The AI may retain concise source/provenance notes internally. Save a user-facing report only when requested; do not make a download the main result. Record new human feedback only when explicitly given. Do not silently mark a curated article as published or import it into the legacy state as an approved X repost.
+Normally no standalone report or Hold/deferred table. Aim for 2–3 useful posts; never fabricate or fill slots with websites/unchecked links. If only one qualifies, give it. If none qualifies after bounded replacement, explain the concrete access/topic limitation briefly and a useful next step. Do not claim automated sourcing works end to end when social access is unavailable.
 
-## Optional task: strict publication-readiness audit
+Keep source facts separate from editorial inference. Recommendations do not constitute official publication approval or confirmation of account-level repost permissions. Record posted state or human feedback only when explicitly given.
 
-Only when the user explicitly asks to check a specified post for official-account repost/quote approval, read [input contract](references/input-contract.md), [evidence completion](references/evidence-completion.md), [search workflow](references/search-assisted-sourcing.md) and [history limits](references/history-lessons.md). Then use the existing offline `repost.py` validation/state/export pipeline and completion v1. Its stricter dates/media/brand/duplicate gates and Hold/deferred outputs apply to this optional mode, not ordinary content discovery.
+## Optional explicit publication audit
 
-State which mode is used when an explicit task is ambiguous; default to curation for "find worthwhile posts/URLs". Do not ask the user to choose a mode for an ordinary request.
+Only when asked to check a particular post for official publication, read [input contract](references/input-contract.md), [evidence completion](references/evidence-completion.md), [search workflow](references/search-assisted-sourcing.md) and [history limits](references/history-lessons.md). Apply the original evidence/media/brand/dedup audit and offline runner as appropriate; Hold/deferred may be valid here. Legacy X-only schemas cannot establish LinkedIn clearance; use actual LinkedIn permalink/evidence without faking an X ID.
 
-## Runtime boundaries
+## Boundaries
 
-Host AI search is the default discovery mechanism. The Python scripts do not perform standalone X API collection; that adapter remains unimplemented. Do not purchase services, inspect secrets, schedule work, deploy, publish, like or message. Respect site safeguards and actual tool availability.
-
-Preserve previous files, user edits and evidence. A failed old trial must remain in history, not be rewritten as success. Tests of code structure are not tests of editorial usefulness. For skill revisions, forward-test a plain no-link request in a fresh context and inspect its actual chat answer and sources; do not give expected recommendations to the evaluator.
+Use host AI search and authorized reading tools. No independent X/LinkedIn API collector is implemented. Do not publish, like, message, purchase, deploy, schedule or inspect secrets. Preserve user edits and historical evidence. Old failures stay failures. Forward-test both routes in fresh contexts after substantial revisions; assess actual social permalinks, reading evidence, business connection and useful chat delivery.
 

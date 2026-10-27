@@ -1,3 +1,0 @@
-﻿post_id,url,author,lane,verdict,selected,reason_codes,summary_zh,review_status
-2112760256120197333,https://x.com/i/web/status/2112760256120197333,'@vllm_project,Other,hold,False,incomplete_evidence;facts_unverified;brand_unknown;post_type_unknown;publication_time_unknown;editorial_hold,Humming量化推理kernel：仅为待核验线索，本轮不能推荐。,deferred
-2112005673303339084,https://x.com/i/web/status/2112005673303339084,'@vllm_project,Other,hold,False,incomplete_evidence;facts_unverified;brand_unknown;post_type_unknown;publication_time_unknown;editorial_hold,vLLM多模态自建部署线索：仅为待核验线索，本轮不能推荐。,deferred

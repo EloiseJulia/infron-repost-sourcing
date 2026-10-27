@@ -1,4 +1,4 @@
 interface:
-  display_name: "Infron Content Recommendations"
-  short_description: "Find useful AI posts and articles, return links in chat"
-  default_prompt: "Use $infron-repost-sourcing to find 2-3 worthwhile AI model or inference-engineering posts or articles and give me links and concise reasons directly in chat."
+  display_name: "Infron Repost Sourcing"
+  short_description: "Find relevant X and LinkedIn posts for Infron to repost"
+  default_prompt: "Use $infron-repost-sourcing to find X or LinkedIn posts on my topic or relevant trending opportunities for Infron, with direct post links and concise repost angles."

@@ -1,12 +1,12 @@
 # Editorial rules · 0.1.0 · 2026-10-26
 
-v0.1.3 mode note: the principles below guide relevance/brand judgment. The mandatory complete-X-media gates and terminal Hold/reject workflow are for explicit publication-readiness audit. Default curation follows SKILL.md: recommend a separately inspected primary article when the X post is inaccessible; do not imply that the inaccessible post itself was cleared. Timeliness is a reasoned editorial preference in curation, not the legacy 48h hard gate.
+v0.1.4 scope: default sourcing returns only actual X or LinkedIn post permalinks, via topic-led or opportunity-led discovery. Websites supply background evidence, never substitute recommendations. Follow SKILL.md for bounded replacement and chat delivery. The terminal Hold/reject workflow below applies to explicit publication clearance; missing central evidence excludes a default candidate, so seek another social post.
 
 ## Grounding and precedence
 
-User instructions → current explicit brief/mentor feedback → current project brand context → these provisional rules → observed history. Preserve provenance; do not turn inferred motives into mentor decisions.
+User instructions → current explicit brief and feedback → current project brand context → these provisional rules → observed history. Preserve provenance; do not turn inferred motives into editorial decisions.
 
-Confirmed feedback is the user's 2026-10-25 account in the brand context: official sources are preferred, but assess the promoted product; prefer another post when the original or core media promotes a business-overlapping product. Other models are generally mentionable. Authoritative rankings can be considered in context. Do not create a company blacklist from an uncertain transcribed product name.
+Official sources are preferred, but assess the promoted product; prefer another post when the original or core media promotes a business-overlapping product. Other models are generally mentionable. Authoritative rankings can be considered in context. Do not create a company blacklist from an uncertain product name.
 
 Historical sharing is positive action evidence only. A quote of an Alibaba Cloud/Infron collaboration is a specific partnership context, not a waiver for all cloud promotions. A quoted Arena ranking supports considering evaluator content; it does not pre-approve every ranking. No historical non-selection is a negative label.
 
@@ -32,4 +32,3 @@ Historical sharing is positive action evidence only. A quote of an Alibaba Cloud
 | Same release with better headline | Hold as event duplicate | Rewording is not material progress |
 
 Use natural, precise Chinese summaries and technical English source names. Show what the reader learns, why now, source, gaps and incremental value. Do not add sales claims unless explicitly requested and freshly verified.
-

@@ -482,7 +482,7 @@ def main():
         if args.command == 'preflight':
             print(json.dumps({'manual_mode':'implemented','automatic_discovery':False,'network_calls':0,
                               'credentials_examined':False,'missing':['authorized X data adapter/configuration',
-                              'explicit trial spending cap'],'browser_history':'not probed by this command; consult dated access log'},indent=2))
+                              'explicit trial spending cap'],'browser_history':'not probed by this command; see references/data-access.md for dated observations'},indent=2))
         elif args.command == 'prepare':
             require(not Path(args.output).exists(),'output exists; refusing overwrite')
             bundle = read(args.input)

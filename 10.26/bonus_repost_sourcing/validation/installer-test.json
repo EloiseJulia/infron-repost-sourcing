@@ -1,8 +1,0 @@
-{
-  "initial_copy": "pass",
-  "original_design_and_brand_preserved": "pass",
-  "skill_bytes_match": "pass",
-  "idempotent_second_copy": "pass",
-  "conflict_stops_before_copy": "pass",
-  "real_desktop_written": false
-}
